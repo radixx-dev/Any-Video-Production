@@ -12,11 +12,14 @@ Bundled files keep their upstream licence. Nothing here is relicensed by this re
 | lemo-opuscar skill (fetcher) | `skills/lemo-opuscar/` | MIT AND CC-BY-NC-4.0 | Lemomo — `lemomo-ai/lemo-opuscar` |
 | Lemo-Opuscar library (fetched, not committed) | `~/lemo-opuscar` | MIT AND CC-BY-NC-4.0 | Lemomo |
 
-## Read before publishing a public mirror
+## Publishing this repo
 
-1. **Lemo-Opuscar is `MIT AND CC-BY-NC-4.0`.** The **NC** part covers style prompts and demo films:
-   they are non-commercial. A film you make in a style may carry that restriction, so check the
-   style's `STYLE.md` and the library `LICENSES/` folder before selling work made with it.
+This repo is free, public and non-commercial, and every bundled component allows that:
+
+1. **Lemo-Opuscar is `MIT AND CC-BY-NC-4.0`.** The NC part covers the style prompts and demo films.
+   This repo ships only the MIT plugin fetcher, not the library, and is itself non-commercial — so
+   bundling it is within the terms. A fork that *sells* films made in a style is a different case;
+   that is the fork's call, not this repo's.
 2. **Two things were deliberately left out** of this bundle because they carry no licence:
    - `hookscore.py` + `hooks.json` from the "reel skill" packs — replaced by the MIT TypeScript
      scorer in `skills/instagram-content/scripts/`.
