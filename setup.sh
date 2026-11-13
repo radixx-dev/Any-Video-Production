@@ -61,11 +61,13 @@ EARSHOT_VENV="$ROOT/vendor/earshot/.venv/bin/earshot"
 if [ -x "$EARSHOT_VENV" ]; then pass "vendor/earshot/.venv"
 elif [ -x "$ROOT/../earshot/.venv/bin/earshot" ]; then pass "reusing a sibling earshot install"
 elif [ "$WITH_SFX" = 1 ] && [ "$CHECK_ONLY" = 0 ]; then
-  say "  building vendor/earshot/.venv (torch download, several minutes)…"
+  say "  installing earshot from GitHub into vendor/earshot/.venv (torch download, several minutes)…"
+  mkdir -p "$ROOT/vendor/earshot"
   python3 -m venv "$ROOT/vendor/earshot/.venv"
   "$ROOT/vendor/earshot/.venv/bin/python" -m pip install --quiet --upgrade pip
-  "$ROOT/vendor/earshot/.venv/bin/python" -m pip install --quiet -e "$ROOT/vendor/earshot"
-  pass "vendor/earshot/.venv built"
+  "$ROOT/vendor/earshot/.venv/bin/python" -m pip install --quiet \
+    "earshot @ git+https://github.com/Leonxlnx/earshot@591fa3e028032e6dce56620a20e932e35667e8d8"
+  pass "earshot installed (pinned 591fa3e0)"
 else
   say "  note  not built; SFX falls back to the Lemo foley kit (core/audio/sfx.py)"
   say "        build it later with ./setup.sh --with-sfx"

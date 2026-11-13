@@ -4,7 +4,7 @@ Bundled files keep their upstream licence. Nothing here is relicensed by this re
 
 | Component | Where | Licence | Author / source |
 |---|---|---|---|
-| earshot (source + SFX bank) | `vendor/earshot/`, `skills/earshot/` | MIT | Leon Lin — earshot 0.4.0 |
+| earshot | `skills/earshot/` (installed on demand) | MIT | Leon Lin — `github.com/Leonxlnx/earshot` |
 | humanizer | `skills/humanizer/` | MIT | Siqi Chen — `blader/humanizer` 4.0.0 |
 | instagram-research, instagram client | `skills/instagram-research/`, `skills/instagram/` | MIT | Proyecto 26 — `proyecto26/instagram-ai-plugin` |
 | hook formulas + scorer | `skills/instagram-content/scripts/` | MIT | same repo |
