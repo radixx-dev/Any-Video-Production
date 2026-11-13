@@ -244,7 +244,7 @@ What `./setup.sh` downloads on first run, so nobody mistakes it for a bug:
 | Symptom | Cause | Fix |
 |---|---|---|
 | `BEWARE: your OS is not officially supported by Playwright` | Linux distro without an official build | harmless — it downloads the closest fallback and renders |
-| `blocks not installed: run setup.sh deps` | first run, or `package.json` changed upstream | `./bin/../setup.sh` (or `sh skills/lemo-opuscar/scripts/setup.sh deps`) |
+| `! packages not installed yet: run 'sh setup.sh deps'` | first run, or the engine's `package.json` changed upstream | `./setup.sh`, or `sh skills/lemo-opuscar/scripts/setup.sh deps` |
 | `need bun or npx` | Node < 20 or not installed | install Node 20+, `nvm use 22` |
 | earshot "not installed yet" | env not built | `./setup.sh --with-sfx`, or `EARSHOT_BIN=/path/to/earshot` |
 | `not_logged_in` / `checkpoint` | Instagram session expired or challenged | `./bin/research.sh login --force`, complete it in the browser |
