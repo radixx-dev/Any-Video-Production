@@ -1,0 +1,23 @@
+# environments and packages
+.venv/
+node_modules/
+__pycache__/
+*.egg-info/
+vendor/earshot/.venv/
+
+# films and their output (source stays, media does not)
+films/*/out/
+films/*/stills/
+films/*/gen/
+renders/
+templates/*/stills/
+*.mp4
+*.mov
+*.wav
+*.mp3
+mix*.flac
+
+# film by-products
+events.json
+*.log
+.DS_Store

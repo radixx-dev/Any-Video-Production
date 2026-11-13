@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>untitled film</title>
+<style>
+  html, body { margin: 0; background: #0b0f14; }
+  canvas { display: block; }
+</style>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+// Lemo-Opuscar page contract:
+//   window.render(t)  draw the frame at second t — deterministic, no Date.now(), no unseeded random
+//   window.DUR        film length in seconds
+//   window.READY      true once fonts and images are loaded (the renderer waits for it)
+//   window.TEXTS(t)   every on-screen text visible at t, with its box — required by readcheck
+const c = document.getElementById('c');
+const x = c.getContext('2d');
+const FONT = 'Minecraft';           // house rule: Minecraft for all on-screen lettering
+
+window.DUR = 6;
+
+function draw(t) {
+  x.fillStyle = '#0C1116';
+  x.fillRect(0, 0, c.width, c.height);
+
+  // a structural beat every 2–3 s, not a glow
+  const beat = Math.min(3, Math.floor(t / 2));
+  x.fillStyle = '#E3B24F';
+  x.fillRect(160, 760 + beat * 14, 120 + beat * 180, 8);
+
+  x.fillStyle = '#F4EEE1';
+  x.font = `bold 96px ${FONT}, monospace`;
+  x.textAlign = 'left';
+  x.fillText('FIRST LINE.', 160, 560);
+}
+
+const LINES = [
+  { id: 'l1', text: 'FIRST LINE.', t0: 0.0, t1: 3.0, box: [160, 470, 1100, 590] },
+  { id: 'l2', text: 'SECOND LINE.', t0: 3.0, t1: 6.0, box: [160, 470, 1200, 590] },
+];
+
+window.TEXTS = (t) => LINES
+  .filter(l => t >= l.t0 && t < l.t1)
+  .map(l => ({ id: l.id, text: l.text, x0: l.box[0], y0: l.box[1], x1: l.box[2], y1: l.box[3] }));
+
+window.render = draw;
+
+(async () => {
+  try {
+    await document.fonts.load(`bold 96px ${FONT}`);
+  } catch (e) { /* fallback face is fine for a skeleton */ }
+  draw(0);
+  window.READY = true;
+})();
+</script>
+</html>
