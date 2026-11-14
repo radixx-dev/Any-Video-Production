@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>style cards</title>
+<style>
+  @font-face { font-family: 'Minecraft'; src: url('fonts/MinecraftRegular-Bmg3.otf'); font-weight: 400; }
+  @font-face { font-family: 'Minecraft'; src: url('fonts/MinecraftBold-nMK1.otf'); font-weight: 700; }
+  html, body { margin: 0; background: #000; }
+  canvas { display: block; }
+</style>
+<canvas id="c" width="3840" height="2160"></canvas>
+<script>
+// Style cards: one tile per Lemo-Opuscar style, built from that style's own STYLE.md palette
+// and the grammar of its category. 5×5 per sheet, 4 sheets, 100 styles.
+//   ?sheet=0..3   which 25 to draw
+// Deterministic: no Date.now(), no unseeded random, all positions from the tile index.
+const C = document.getElementById('c'), X = C.getContext('2d');
+const COLS = 5, ROWS = 5, TW = 768, TH = 432;
+const INK_FALLBACK = '#F4EEE1';
+
+let DATA = null;
+const rnd = (i, n) => ((Math.sin(i * 12.9898 + n * 78.233) * 43758.5453) % 1 + 1) % 1;
+const wrap = (s, n) => {
+  const w = s.split(' '); const out = []; let line = '';
+  for (const x of w) {
+    if ((line + ' ' + x).trim().length > n) { if (line) out.push(line); line = x; }
+    else line = (line + ' ' + x).trim();
+  }
+  if (line) out.push(line);
+  return out.slice(0, 2);
+};
+
+function motif(cat, pal, i) {
+  const [bg, ink, a1, a2] = pal;
+  const r = (n) => ((Math.sin(i * 12.9898 + n * 78.233) * 43758.5453) % 1 + 1) % 1;
+  X.save();
+  X.beginPath(); X.rect(0, 0, TW, TH); X.clip();
+  X.globalAlpha = 1;
+
+  switch (cat) {
+    case 'Edit & Documentary': {                       // timecode ruler + waveform
+      X.fillStyle = ink; X.globalAlpha = 0.18;
+      for (let k = 0; k < 40; k++) X.fillRect(k * 20 + 8, TH - 46, 2, k % 5 === 0 ? 26 : 12);
+      X.globalAlpha = 0.9; X.fillStyle = a1;
+      for (let k = 0; k < 34; k++) {
+        const h = 30 + 90 * Math.abs(Math.sin(i + k * 0.7));
+        X.fillRect(24 + k * 22, TH - 70 - h, 10, h);
+      }
+      break;
+    }
+    case 'Painting & Illustration': {                  // overlapping dabs
+      for (let k = 0; k < 16; k++) {
+        X.globalAlpha = 0.16 + 0.1 * (k % 3);
+        X.fillStyle = k % 3 === 0 ? a1 : (k % 3 === 1 ? a2 : ink);
+        X.beginPath();
+        X.ellipse(80 + r(k) * 620, 90 + r(k + 7) * 260, 90 + r(k + 3) * 90, 34 + r(k + 9) * 30, r(k + 5) * 0.8, 0, 7);
+        X.fill();
+      }
+      break;
+    }
+    case 'Sketch & Board': {                           // hatch
+      X.globalAlpha = 0.22; X.strokeStyle = ink; X.lineWidth = 3;
+      for (let k = -10; k < 30; k++) {
+        X.beginPath(); X.moveTo(k * 40, TH); X.lineTo(k * 40 + 180, 0); X.stroke();
+      }
+      X.globalAlpha = 0.5; X.strokeStyle = a1; X.lineWidth = 6;
+      X.strokeRect(60, 80, 250, 170);
+      break;
+    }
+    case 'Traditional Crafts': {                       // diamond band
+      X.globalAlpha = 0.75; X.fillStyle = a1;
+      for (let k = 0; k < 12; k++) {
+        const x = k * 68, y = TH - 110;
+        X.beginPath(); X.moveTo(x, y); X.lineTo(x + 30, y - 34); X.lineTo(x + 60, y); X.lineTo(x + 30, y + 34); X.closePath(); X.fill();
+      }
+      X.globalAlpha = 0.35; X.fillStyle = a2;
+      for (let k = 0; k < 12; k++) X.fillRect(k * 68 + 10, TH - 210, 40, 8);
+      break;
+    }
+    case 'Print & Printmaking': {                      // halftone
+      X.fillStyle = ink;
+      for (let yy = 0; yy < 12; yy++) for (let xx = 0; xx < 20; xx++) {
+        const d = Math.hypot(xx - 10, yy - 6) / 12;
+        X.globalAlpha = 0.28; X.beginPath();
+        X.arc(40 + xx * 38, 60 + yy * 32, Math.max(1.5, 12 * (1 - d)), 0, 7); X.fill();
+      }
+      break;
+    }
+    case 'Graphic & Type': {                           // one giant letter, blocks
+      const ch = (DATA.cards[i].en || 'A')[0].toUpperCase();
+      X.globalAlpha = 0.14; X.fillStyle = a1;
+      X.font = `700 420px Minecraft, monospace`; X.textAlign = 'right';
+      X.fillText(ch, TW - 30, TH - 20);
+      break;
+    }
+    case 'Line Diagrams': {                            // grid + callout
+      X.globalAlpha = 0.2; X.strokeStyle = a2; X.lineWidth = 2;
+      for (let k = 0; k < 10; k++) { X.beginPath(); X.moveTo(k * 80, 0); X.lineTo(k * 80, TH); X.stroke(); }
+      for (let k = 0; k < 6; k++) { X.beginPath(); X.moveTo(0, k * 80); X.lineTo(TW, k * 80); X.stroke(); }
+      X.globalAlpha = 0.85; X.strokeStyle = a1; X.lineWidth = 5;
+      X.strokeRect(90, 230, 200, 120); X.beginPath(); X.arc(430, 150, 46, 0, 7); X.stroke();
+      X.beginPath(); X.moveTo(290, 230); X.lineTo(400, 180); X.stroke();
+      break;
+    }
+    case 'Cartoons': {                                 // impact circle + speed lines
+      X.globalAlpha = 0.85; X.fillStyle = a1;
+      X.beginPath(); X.arc(560, 200, 92, 0, 7); X.fill();
+      X.globalAlpha = 0.4; X.strokeStyle = ink; X.lineWidth = 4;
+      for (let k = 0; k < 9; k++) {
+        const an = k / 9 * Math.PI * 2;
+        X.beginPath(); X.moveTo(560 + Math.cos(an) * 110, 200 + Math.sin(an) * 110);
+        X.lineTo(560 + Math.cos(an) * 170, 200 + Math.sin(an) * 170); X.stroke();
+      }
+      break;
+    }
+    case 'Games': {                                    // pixel field
+      for (let yy = 0; yy < 9; yy++) for (let xx = 0; xx < 16; xx++) {
+        const on = ((xx + yy * 3 + i) % 5) < 2;
+        X.globalAlpha = on ? 0.55 : 0.12;
+        X.fillStyle = (xx + yy) % 3 === 0 ? a1 : ink;
+        X.fillRect(120 + xx * 32, 70 + yy * 32, 24, 24);
+      }
+      break;
+    }
+    case 'Film & Tape': {                              // sprockets + scanlines
+      X.globalAlpha = 0.75; X.fillStyle = ink;
+      for (let k = 0; k < 20; k++) { X.fillRect(k * 40 + 12, 14, 20, 16); X.fillRect(k * 40 + 12, TH - 30, 20, 16); }
+      X.globalAlpha = 0.16; X.fillStyle = a1;
+      for (let k = 0; k < 60; k++) X.fillRect(0, k * 8, TW, 3);
+      break;
+    }
+    case 'Screens & Interfaces': {                     // HUD brackets + readout bars
+      X.globalAlpha = 0.9; X.strokeStyle = a1; X.lineWidth = 6;
+      const b = 54, L = 90;
+      [[b, b, 1, 1], [TW - b, b, -1, 1], [b, TH - b, 1, -1], [TW - b, TH - b, -1, -1]].forEach(([x, y, dx, dy]) => {
+        X.beginPath(); X.moveTo(x, y + dy * L); X.lineTo(x, y); X.lineTo(x + dx * L, y); X.stroke();
+      });
+      X.globalAlpha = 0.35; X.fillStyle = a2;
+      for (let k = 0; k < 18; k++) X.fillRect(TW - 260 + k * 12, 120, 6, 20 + 60 * Math.abs(Math.sin(k + i)));
+      break;
+    }
+    case 'Light & Lines': {                            // glowing streaks
+      for (let k = 0; k < 7; k++) {
+        X.globalAlpha = 0.16 + k * 0.05;
+        X.strokeStyle = k % 2 ? a1 : a2; X.lineWidth = 3 + k * 2;
+        X.beginPath(); X.moveTo(-40 + k * 40, TH + 20); X.lineTo(220 + k * 90, -20); X.stroke();
+      }
+      break;
+    }
+    case '3D & Miniature': {                           // isometric cubes
+      for (let k = 0; k < 6; k++) {
+        const x = 150 + (k % 3) * 200, y = 130 + Math.floor(k / 3) * 150, s = 54;
+        X.globalAlpha = 0.7; X.fillStyle = a1;
+        X.beginPath(); X.moveTo(x, y); X.lineTo(x + s, y - s / 2); X.lineTo(x + s, y + s / 2); X.lineTo(x, y + s); X.closePath(); X.fill();
+        X.globalAlpha = 0.4; X.fillStyle = a2;
+        X.beginPath(); X.moveTo(x + s, y - s / 2); X.lineTo(x + 2 * s, y); X.lineTo(x + 2 * s, y + s); X.lineTo(x + s, y + s / 2); X.closePath(); X.fill();
+        X.globalAlpha = 0.25; X.fillStyle = ink;
+        X.beginPath(); X.moveTo(x, y + s); X.lineTo(x + s, y + s / 2); X.lineTo(x + 2 * s, y + s); X.lineTo(x + s, y + 1.5 * s); X.closePath(); X.fill();
+      }
+      break;
+    }
+    case 'Instruments & Evidence': {                   // scale + crosshair
+      X.globalAlpha = 0.5; X.strokeStyle = ink; X.lineWidth = 3;
+      X.beginPath(); X.moveTo(50, TH - 70); X.lineTo(TW - 50, TH - 70); X.stroke();
+      for (let k = 0; k <= 20; k++) {
+        X.beginPath(); X.moveTo(50 + k * 33, TH - 70); X.lineTo(50 + k * 33, TH - 70 - (k % 5 === 0 ? 26 : 12)); X.stroke();
+      }
+      X.strokeStyle = a1; X.lineWidth = 4; X.globalAlpha = 0.85;
+      X.beginPath(); X.arc(430, 180, 54, 0, 7); X.stroke();
+      X.beginPath(); X.moveTo(430, 100); X.lineTo(430, 260); X.moveTo(350, 180); X.lineTo(510, 180); X.stroke();
+      break;
+    }
+    case 'Data & Maps': {                              // bars + plotted points
+      X.globalAlpha = 0.5; X.fillStyle = a2;
+      for (let k = 0; k < 14; k++) {
+        const h = 30 + 120 * Math.abs(Math.sin(k * 0.9 + i));
+        X.fillRect(90 + k * 34, TH - 90 - h, 22, h);
+      }
+      X.globalAlpha = 0.9; X.fillStyle = a1;
+      for (let k = 0; k < 16; k++) {
+        X.beginPath(); X.arc(120 + r(k) * 520, 90 + r(k + 4) * 150, 6, 0, 7); X.fill();
+      }
+      break;
+    }
+    default: {
+      X.globalAlpha = 0.15; X.strokeStyle = ink; X.lineWidth = 2;
+      for (let k = 0; k < 14; k++) { X.beginPath(); X.moveTo(k * 56, 0); X.lineTo(k * 56, TH); X.stroke(); }
+    }
+  }
+  X.restore();
+}
+
+function card(card, i, ox, oy) {
+  const [bg, ink, a1] = card.pal;
+  X.save();
+  X.translate(ox, oy);
+  X.fillStyle = bg; X.fillRect(0, 0, TW, TH);
+  X.save();
+  X.translate(TW / 2, TH * 0.42);
+  X.rotate((rnd(i, 1) - 0.5) * 0.16);
+  const sc = 1.05 + 0.35 * rnd(i, 2);
+  X.scale(sc, sc);
+  X.translate(-TW / 2, -TH * 0.42);
+  motif(card.cat, card.pal, i);
+  X.restore();
+
+  // a solid text band: the type never fights the motif
+  const bandY = TH - 196;
+  const g = X.createLinearGradient(0, bandY - 80, 0, TH);
+  g.addColorStop(0, 'rgba(0,0,0,0)');
+  g.addColorStop(0.45, 'rgba(0,0,0,0.86)');
+  g.addColorStop(1, 'rgba(0,0,0,0.96)');
+  X.fillStyle = g; X.fillRect(0, bandY - 80, TW, TH - bandY + 80);
+
+  X.textAlign = 'left';
+  const lines = wrap(card.en || card.slug, 18);
+  const lh = 58, slugY = TH - 22;
+  const titleBottom = slugY - 40;
+  const firstY = titleBottom - (lines.length - 1) * lh;
+
+  X.fillStyle = a1; X.fillRect(34, firstY - 66, 44, 7);
+
+  X.fillStyle = '#F4EEE1';
+  X.font = '700 54px Minecraft, monospace';
+  lines.forEach((l, k) => X.fillText(l, 34, firstY + k * lh));
+
+  X.fillStyle = 'rgba(244,238,225,0.66)';
+  X.font = '400 21px Minecraft, monospace';
+  X.fillText(`${card.slug} · ${card.cat}`, 34, slugY);
+
+  X.textAlign = 'right';
+  X.fillStyle = 'rgba(244,238,225,0.45)';
+  X.font = '400 24px Minecraft, monospace';
+  X.fillText(String(card.num || '').padStart(3, '0'), TW - 30, 46);
+
+  X.restore();
+}
+
+async function draw(sheet) {
+  DATA = await (await fetch('cards.json')).json();
+  X.fillStyle = '#0B0F14'; X.fillRect(0, 0, C.width, C.height);
+  const slice = DATA.cards.slice(sheet * 25, sheet * 25 + 25);
+  slice.forEach((cd, k) => {
+    const col = k % COLS, row = Math.floor(k / COLS);
+    card(cd, sheet * 25 + k, col * TW, row * TH);
+  });
+  X.strokeStyle = '#0B0F14'; X.lineWidth = 4;
+  for (let c = 1; c < COLS; c++) { X.beginPath(); X.moveTo(c * TW, 0); X.lineTo(c * TW, C.height); X.stroke(); }
+  for (let r2 = 1; r2 < ROWS; r2++) { X.beginPath(); X.moveTo(0, r2 * TH); X.lineTo(C.width, r2 * TH); X.stroke(); }
+}
+
+window.DUR = 1;
+window.render = () => {};
+window.TEXTS = () => [];
+
+const sheet = +(new URLSearchParams(location.search).get('sheet') || 0);
+draw(sheet).then(() => {
+  window.render = () => {};
+  document.fonts.ready.then(() => { draw(sheet).then(() => { window.READY = true; }); });
+}).catch(e => { console.error(e); window.READY = true; });
+</script>
+</html>

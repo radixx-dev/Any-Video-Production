@@ -1,0 +1,1621 @@
+{
+ "cats": [
+  "Edit & Documentary",
+  "Painting & Illustration",
+  "Sketch & Board",
+  "Traditional Crafts",
+  "Print & Printmaking",
+  "Graphic & Type",
+  "Line Diagrams",
+  "Cartoons",
+  "Games",
+  "Film & Tape",
+  "Screens & Interfaces",
+  "Light & Lines",
+  "3D & Miniature",
+  "Instruments & Evidence",
+  "Data & Maps"
+ ],
+ "cards": [
+  {
+   "slug": "caption-news",
+   "num": "01",
+   "en": "Caption News",
+   "cn": "字幕新闻",
+   "cat": "Edit & Documentary",
+   "film": "The Bee Ledger",
+   "line": "America lost 1.3 million bee colonies, yet the count rose 6 %: a news short that works with the sound off.",
+   "pal": [
+    "#0E0E0C",
+    "#F7F5EF",
+    "#FFC21A",
+    "#FF4A3D"
+   ],
+   "real": false
+  },
+  {
+   "slug": "newsreel",
+   "num": "02",
+   "en": "1920s Newsreel",
+   "cn": "1920s 新闻影片",
+   "cat": "Edit & Documentary",
+   "film": "Knock-Knee Alert",
+   "line": "1926: the papers say the Charleston will ruin America's knees; at Ford's own picnic the kids dance it anyway.",
+   "pal": [
+    "#0A0908",
+    "#F3EEE4",
+    "#17140F",
+    "#9E978A"
+   ],
+   "real": false
+  },
+  {
+   "slug": "countdown",
+   "num": "03",
+   "en": "Live Countdown Split-screen",
+   "cn": "实时倒计时分屏",
+   "cat": "Edit & Documentary",
+   "film": "Counting Itself Down",
+   "line": "The last minute of the Artemis II launch, uncut: one cell opens to nine, and they merge into one at ignition.",
+   "pal": [
+    "#06080A",
+    "#F2F5F7",
+    "#FF5B1F",
+    "#FF3B30"
+   ],
+   "real": false
+  },
+  {
+   "slug": "city-symphony",
+   "num": "04",
+   "en": "City Symphony",
+   "cn": "城市交响曲",
+   "cat": "Edit & Documentary",
+   "film": "One Day in New York",
+   "line": "One day in New York in time-lapse: rivers of light, a grid on the sixteenths, 1899 beside today.",
+   "pal": [
+    "#000000",
+    "#EDE8DF",
+    "#D9772F",
+    "#B0AAA0"
+   ],
+   "real": false
+  },
+  {
+   "slug": "visual-investigation",
+   "num": "05",
+   "en": "Visual Investigation",
+   "cn": "视觉调查",
+   "cat": "Edit & Documentary",
+   "film": "The Hindenburg: Four Minutes, 32 Seconds",
+   "line": "Newsreel, photos, testimony and the 1937 inquiry on one clock: five sources point to the same spot.",
+   "pal": [
+    "#0B0C0E",
+    "#ECEAE4",
+    "#FF4A2E",
+    "#141619"
+   ],
+   "real": false
+  },
+  {
+   "slug": "kino-montage",
+   "num": "06",
+   "en": "Constructivist Montage",
+   "cn": "构成主义蒙太奇",
+   "cat": "Edit & Documentary",
+   "film": "410 Days",
+   "line": "The Empire State's 1931 brochure credits its builders; the site film and Hine's photos answer: 2,500 a day.",
+   "pal": [
+    "#101820",
+    "#F2EDE4",
+    "#E4572E",
+    "#2E86AB"
+   ],
+   "real": false
+  },
+  {
+   "slug": "telestrator",
+   "num": "07",
+   "en": "Sports Telestrator",
+   "cn": "体育战术板",
+   "cat": "Edit & Documentary",
+   "film": "Freeze Frame",
+   "line": "Down 3–0 at half-time, Fenerbahçe scored three in 12 minutes: freeze, draw, split screen, shot map.",
+   "pal": [
+    "#080C0E",
+    "#F4F1E8",
+    "#FFD400",
+    "#FF3B30"
+   ],
+   "real": false
+  },
+  {
+   "slug": "news-package",
+   "num": "08",
+   "en": "Broadcast News Package",
+   "cn": "电视新闻包装",
+   "cat": "Edit & Documentary",
+   "film": "The Week in AI",
+   "line": "Four AI stories from one week in a full on-air package: rundown, headline strap, price board, spec card.",
+   "pal": [
+    "#0E1013",
+    "#F4F1E8",
+    "#D8B30C",
+    "#F2CF1D"
+   ],
+   "real": false
+  },
+  {
+   "slug": "crayon-book",
+   "num": "09",
+   "en": "Crayon Picture Book",
+   "cn": "蜡笔儿童绘本",
+   "cat": "Painting & Illustration",
+   "film": "The Moon Can't Sleep",
+   "line": "The moon can't sleep, so a little girl climbs onto the roof to sing it a lullaby.",
+   "pal": [
+    "#1B1714",
+    "#F4EEE3",
+    "#C2543A",
+    "#5B7C6F"
+   ],
+   "real": false
+  },
+  {
+   "slug": "watercolor",
+   "num": "10",
+   "en": "Watercolor Brush",
+   "cn": "水彩笔刷",
+   "cat": "Painting & Illustration",
+   "film": "Follow the Rain",
+   "line": "Follow the rain from Australia's red desert heart to its green coast in one unbroken painted walk.",
+   "pal": [
+    "#4E6E3C",
+    "#F3E2C8",
+    "#C8442A",
+    "#D9632E"
+   ],
+   "real": false
+  },
+  {
+   "slug": "impasto",
+   "num": "11",
+   "en": "Impasto Oil Painting",
+   "cn": "油画厚涂",
+   "cat": "Painting & Illustration",
+   "film": "The Colour of Rain",
+   "line": "In a grey, rainy square one red umbrella opens, and a waltz paints the whole plaza in colour.",
+   "pal": [
+    "#1B1714",
+    "#F4EEE3",
+    "#C2543A",
+    "#5B7C6F"
+   ],
+   "real": false
+  },
+  {
+   "slug": "urban-sketch",
+   "num": "12",
+   "en": "Urban Sketch · Pen & Wash",
+   "cn": "钢笔淡彩",
+   "cat": "Painting & Illustration",
+   "film": "Where the Wind Went",
+   "line": "A park that is only a pen sketch; wherever the wind carries her straw hat, colour follows.",
+   "pal": [
+    "#B8483E",
+    "#BCD0DC",
+    "#C9573F",
+    "#E2B04A"
+   ],
+   "real": false
+  },
+  {
+   "slug": "colored-pencil",
+   "num": "13",
+   "en": "Colored-Pencil Science Illustration",
+   "cn": "彩铅科普插画",
+   "cat": "Painting & Illustration",
+   "film": "The Other Half",
+   "line": "Do trees feed each other? A pencil drawing sinks below the grass, follows one grain of sugar along a fungal thread to the next tree, and pulls back over a whole wood joined underground.",
+   "pal": [
+    "#33241C",
+    "#FCFAF0",
+    "#4D3018",
+    "#BD763B"
+   ],
+   "real": false
+  },
+  {
+   "slug": "one-line",
+   "num": "14",
+   "en": "One-line Drawing",
+   "cn": "一笔画",
+   "cat": "Sketch & Board",
+   "film": "The Line That Never Lifted",
+   "line": "One unbroken line draws a whole life, then the pen passes to a child.",
+   "pal": [
+    "#F6F1E6",
+    "#22201C",
+    "#2F6F4F",
+    "#B23A2F"
+   ],
+   "real": false
+  },
+  {
+   "slug": "whiteboard",
+   "num": "15",
+   "en": "Whiteboard Explainer",
+   "cn": "白板讲解",
+   "cat": "Sketch & Board",
+   "film": "Einstein in Your Pocket",
+   "line": "How your phone knows where you are: GPS, atomic clocks, and the 38 microseconds relativity adds every day.",
+   "pal": [
+    "#23262C",
+    "#D97757",
+    "#1F8A8A",
+    "#2A5CB3"
+   ],
+   "real": false
+  },
+  {
+   "slug": "chalkboard",
+   "num": "16",
+   "en": "Chalkboard",
+   "cn": "黑板粉笔",
+   "cat": "Sketch & Board",
+   "film": "The Story of Chinese Characters",
+   "line": "Chalk writes a popular claim about two characters, wipes it, and traces 射 back three thousand years.",
+   "pal": [
+    "#F6F1E6",
+    "#22201C",
+    "#2F6F4F",
+    "#B23A2F"
+   ],
+   "real": false
+  },
+  {
+   "slug": "sketchnote",
+   "num": "17",
+   "en": "Sketchnote",
+   "cn": "视觉笔记",
+   "cat": "Sketch & Board",
+   "film": "How Bees Make Honey",
+   "line": "One bee makes 1/12 of a teaspoon of honey in her life; the pen follows one yellow drop from flower to jar until the whole page is a poster.",
+   "pal": [
+    "#1E1E22",
+    "#FBFAF6",
+    "#F5AA00",
+    "#5B5852"
+   ],
+   "real": false
+  },
+  {
+   "slug": "stick-explainer",
+   "num": "18",
+   "en": "Stick-figure Explainer",
+   "cn": "火柴人讲解",
+   "cat": "Sketch & Board",
+   "film": "Six Hands Away",
+   "line": "A chain of hands from you to a stranger: tested with letters in 1967, explained by rings that outgrow the Earth, closed around the globe.",
+   "pal": [
+    "#24242C",
+    "#F3F0EA",
+    "#EB4A2A",
+    "#9C978C"
+   ],
+   "real": false
+  },
+  {
+   "slug": "ipad-sketch",
+   "num": "19",
+   "en": "Tablet Sketch Explainer",
+   "cn": "平板速写讲解",
+   "cat": "Sketch & Board",
+   "film": "From Cherry to Cup",
+   "line": "The coffee in your cup turns into a red cherry, then walks back to the cup: ripening, drying, roasting and grinding, one colour change at a time on a single pencil page.",
+   "pal": [
+    "#43362E",
+    "#F3EADB",
+    "#F1C04F",
+    "#DC6A4C"
+   ],
+   "real": false
+  },
+  {
+   "slug": "marker-paper",
+   "num": "20",
+   "en": "Marker on Paper",
+   "cn": "马克笔白纸速写",
+   "cat": "Sketch & Board",
+   "film": "How Far Can You See?",
+   "line": "A felt-tip marker works out how far the horizon is from a beach, then shows that climbing a hundred times higher only lets you see ten times farther.",
+   "pal": [
+    "#1B1C20",
+    "#FAF9F5",
+    "#2456D6",
+    "#E23B2E"
+   ],
+   "real": false
+  },
+  {
+   "slug": "ink-wash",
+   "num": "21",
+   "en": "Chinese Ink Wash",
+   "cn": "中国水墨",
+   "cat": "Traditional Crafts",
+   "film": "The Swordsman and the River",
+   "line": "A swordsman crosses the river on the water and splits the current with a single stroke.",
+   "pal": [
+    "#14100E",
+    "#EFE3C8",
+    "#B3541E",
+    "#2A6F6B"
+   ],
+   "real": false
+  },
+  {
+   "slug": "shadow-puppet",
+   "num": "22",
+   "en": "Shadow Puppetry",
+   "cn": "皮影戏",
+   "cat": "Traditional Crafts",
+   "film": "Hou Yi Shoots the Suns",
+   "line": "Ten suns scorch the earth until the archer Hou Yi draws his bow, told with leather puppets on a lit screen.",
+   "pal": [
+    "#14100E",
+    "#EFE3C8",
+    "#B3541E",
+    "#2A6F6B"
+   ],
+   "real": false
+  },
+  {
+   "slug": "ukiyoe",
+   "num": "23",
+   "en": "Ukiyo-e",
+   "cn": "浮世绘",
+   "cat": "Traditional Crafts",
+   "film": "Toward the Mountain",
+   "line": "A traveller walks toward a distant mountain; every shot is a woodblock print, a great wave at the climax, the mountain and the whole scroll at the end.",
+   "pal": [
+    "#14100E",
+    "#EFE3C8",
+    "#B3541E",
+    "#2A6F6B"
+   ],
+   "real": false
+  },
+  {
+   "slug": "papercut-red",
+   "num": "24",
+   "en": "Red Paper-cut",
+   "cn": "红色窗花剪纸",
+   "cat": "Traditional Crafts",
+   "film": "Nian Comes to Town",
+   "line": "On New Year's Eve the beast Nian comes to town, and one girl's giant paper-cut lights up the village to scare it off.",
+   "pal": [
+    "#14100E",
+    "#EFE3C8",
+    "#B3541E",
+    "#2A6F6B"
+   ],
+   "real": false
+  },
+  {
+   "slug": "paper-lantern",
+   "num": "25",
+   "en": "Paper-cut Lightbox",
+   "cn": "纸雕灯影",
+   "cat": "Traditional Crafts",
+   "film": "The Last Night Train",
+   "line": "An old night train makes its last run, from a snowy mountain halt through a long tunnel to the sea, its lit windows going out one by one at the end of the line.",
+   "pal": [
+    "#1E0E08",
+    "#DFE6EE",
+    "#0A1330",
+    "#0E1532"
+   ],
+   "real": true
+  },
+  {
+   "slug": "stained-glass",
+   "num": "26",
+   "en": "Stained Glass",
+   "cn": "彩色玻璃窗",
+   "cat": "Traditional Crafts",
+   "film": "The Dragon of the East Window",
+   "line": "Sunlight crosses a cathedral window from dawn to dusk, waking each pane of a knight-and-dragon tale.",
+   "pal": [
+    "#14100E",
+    "#EFE3C8",
+    "#B3541E",
+    "#2A6F6B"
+   ],
+   "real": false
+  },
+  {
+   "slug": "gilded-illumination",
+   "num": "27",
+   "en": "Gilded Illumination",
+   "cn": "金箔彩绘",
+   "cat": "Traditional Crafts",
+   "film": "Borrowed Light",
+   "line": "In a painted world where only gold shines, the sun goes out; a girl carries the last lamp up the mountain and gives it its light back.",
+   "pal": [
+    "#2A1A10",
+    "#EFE2C4",
+    "#C8321F",
+    "#22379A"
+   ],
+   "real": false
+  },
+  {
+   "slug": "risograph",
+   "num": "28",
+   "en": "Risograph Print",
+   "cn": "孔版印刷",
+   "cat": "Print & Printmaking",
+   "film": "Sunday Ride",
+   "line": "A Sunday-morning bike ride through the city — bakery, park, riverside — each stop adding an ink until three misregistered plates overprint.",
+   "pal": [
+    "#3D5588",
+    "#F4EEE2",
+    "#0078BF",
+    "#FFE800"
+   ],
+   "real": false
+  },
+  {
+   "slug": "halftone-dossier",
+   "num": "29",
+   "en": "Halftone Dossier",
+   "cn": "网点档案",
+   "cat": "Print & Printmaking",
+   "film": "Case File: Chubby",
+   "line": "A chubby orange cat stands trial for testing gravity and 4 a.m. parkour, and walks free.",
+   "pal": [
+    "#0E0E10",
+    "#F1E9D8",
+    "#D9482B",
+    "#1D3A5F"
+   ],
+   "real": true
+  },
+  {
+   "slug": "woodcut",
+   "num": "30",
+   "en": "Woodcut Print",
+   "cn": "木刻版画",
+   "cat": "Print & Printmaking",
+   "film": "The Bell Founder",
+   "line": "A village spends a whole winter casting one bell; the first time it rings, the snow stops.",
+   "pal": [
+    "#0E0E10",
+    "#F1E9D8",
+    "#D9482B",
+    "#1D3A5F"
+   ],
+   "real": false
+  },
+  {
+   "slug": "engraving",
+   "num": "31",
+   "en": "Copperplate Engraving",
+   "cn": "铜版画",
+   "cat": "Print & Printmaking",
+   "film": "The Honeybee, Plate VII",
+   "line": "A natural-history plate engraves itself: the burin cuts the copper, the bee builds up line by line, and a watercolour wash brings it to life.",
+   "pal": [
+    "#0E0E10",
+    "#F1E9D8",
+    "#D9482B",
+    "#1D3A5F"
+   ],
+   "real": false
+  },
+  {
+   "slug": "silkscreen-poster",
+   "num": "32",
+   "en": "Silkscreen Travel Poster",
+   "cn": "丝印旅行海报",
+   "cat": "Print & Printmaking",
+   "film": "The Long Way Home",
+   "line": "A traveller crosses the world one full-bleed screen print at a time, a ticket stub counting the distance from home, until the far side turns into the way back.",
+   "pal": [
+    "#1F2A3C",
+    "#EEF1F4",
+    "#F2B134",
+    "#E8553D"
+   ],
+   "real": false
+  },
+  {
+   "slug": "printed-long-take",
+   "num": "33",
+   "en": "Scratchboard Long Take",
+   "cn": "刮版画长镜头",
+   "cat": "Print & Printmaking",
+   "film": "Thirty-Three Cranes",
+   "line": "Red-crowned cranes in a Hokkaido valley, one scratchboard take, counted back from 33 to 1,927.",
+   "pal": [
+    "#16171B",
+    "#EDE5CD",
+    "#C4332B",
+    "#DFA443"
+   ],
+   "real": false
+  },
+  {
+   "slug": "pop-art",
+   "num": "34",
+   "en": "Pop Art",
+   "cn": "波普艺术",
+   "cat": "Print & Printmaking",
+   "film": "The Same Banana",
+   "line": "Almost every banana in the shops is one plant, copied: a wall of identical prints, an old banana eaten black by dots, and a wave of colour that turns into many bananas.",
+   "pal": [
+    "#141414",
+    "#F8F2E2",
+    "#FFD21F",
+    "#E4232B"
+   ],
+   "real": false
+  },
+  {
+   "slug": "vintage-collage",
+   "num": "35",
+   "en": "Vintage Engraving Collage",
+   "cn": "复古版画拼贴",
+   "cat": "Print & Printmaking",
+   "film": "The Inverted Jenny",
+   "line": "A 1918 airmail sheet printed with its plane upside down: bought for $24, cut up and scattered, and number 66 is still missing.",
+   "pal": [
+    "#221C17",
+    "#F6EEDB",
+    "#E1AB3B",
+    "#C65F3A"
+   ],
+   "real": false
+  },
+  {
+   "slug": "swiss-motion",
+   "num": "36",
+   "en": "Swiss Motion Graphics",
+   "cn": "瑞士动态排版",
+   "cat": "Graphic & Type",
+   "film": "Five Rules for a Poster",
+   "line": "A concert poster lays itself out by five Swiss design rules; the fifth is to break just one.",
+   "pal": [
+    "#0B0B0B",
+    "#FFFFFF",
+    "#FF5A00",
+    "#E30613"
+   ],
+   "real": false
+  },
+  {
+   "slug": "spy-titles",
+   "num": "37",
+   "en": "60s Spy Title Sequence",
+   "cn": "60s 间谍片头",
+   "cat": "Graphic & Type",
+   "film": "The Velvet Cipher",
+   "line": "Opening titles for an imaginary 1964 spy film: a chase for a stolen key until the shapes lock into the title.",
+   "pal": [
+    "#1B1714",
+    "#ECE6D6",
+    "#D23A22",
+    "#F07A28"
+   ],
+   "real": false
+  },
+  {
+   "slug": "art-deco",
+   "num": "38",
+   "en": "Art Deco",
+   "cn": "装饰艺术",
+   "cat": "Graphic & Type",
+   "film": "Midnight at the Starlight Hotel",
+   "line": "A grand hotel, 1930: a bellboy races lifts and revolving doors to deliver one letter before midnight.",
+   "pal": [
+    "#111111",
+    "#F7F3EA",
+    "#FF4D2E",
+    "#3B5BDB"
+   ],
+   "real": false
+  },
+  {
+   "slug": "pictogram-motion",
+   "num": "39",
+   "en": "Pictogram Motion",
+   "cn": "象形运动图形",
+   "cat": "Graphic & Type",
+   "film": "Left Behind",
+   "line": "A yellow umbrella left on a bus waits out a sunny day on the lost-property shelf, then opens with 312 others when the storm comes back: objects, vehicles, weather and signs as beat-locked geometric pictograms.",
+   "pal": [
+    "#111111",
+    "#F7F3EA",
+    "#FF4D2E",
+    "#3B5BDB"
+   ],
+   "real": false
+  },
+  {
+   "slug": "bauhaus-shapes",
+   "num": "40",
+   "en": "Bauhaus Shapes",
+   "cn": "包豪斯几何",
+   "cat": "Graphic & Type",
+   "film": "COMPOUND",
+   "line": "One dot doubles every ten years: 128 after seventy, 6.02 without compounding, and the last ten years are worth all the rest.",
+   "pal": [
+    "#161C3A",
+    "#F8F7F3",
+    "#0E9F7A",
+    "#2138C8"
+   ],
+   "real": false
+  },
+  {
+   "slug": "flat-space-explainer",
+   "num": "41",
+   "en": "Scale Zoom Explainer",
+   "cn": "扁平尺度漫游",
+   "cat": "Graphic & Type",
+   "film": "The Long Way Down",
+   "line": "A little probe whose eye is a zoom lens fires a dotted sight line at each next stop and takes us from the Milky Way down to a virus.",
+   "pal": [
+    "#1D2052",
+    "#FFF4E2",
+    "#22B38C",
+    "#F2A12F"
+   ],
+   "real": false
+  },
+  {
+   "slug": "text-flash-cuts",
+   "num": "42",
+   "en": "Text Flash Cuts",
+   "cn": "文字闪切",
+   "cat": "Graphic & Type",
+   "film": "Behind You",
+   "line": "A letter, a phone call, a wall of windows, thirteen steps: the girl who told him not to look back is always one step closer, until she turns her head.",
+   "pal": [
+    "#0A0A0C",
+    "#F2EFE8",
+    "#00FF00",
+    "#FF0000"
+   ],
+   "real": false
+  },
+  {
+   "slug": "silhouette-rhythm",
+   "num": "43",
+   "en": "Silhouette Rhythm",
+   "cn": "剪影律动",
+   "cat": "Graphic & Type",
+   "film": "Half a Beat",
+   "line": "A flock of flamingos moves on every beat, and one young bird is always half a beat late; the ripples the others left on the water teach it the beat.",
+   "pal": [
+    "#090307",
+    "#FFF6DC",
+    "#380A52",
+    "#1A083D"
+   ],
+   "real": false
+  },
+  {
+   "slug": "blueprint",
+   "num": "44",
+   "en": "Blueprint",
+   "cn": "工程蓝图",
+   "cat": "Line Diagrams",
+   "film": "Patent Pending: The Cloud Catcher",
+   "line": "An inventor's blueprint draws, explodes and assembles a cloud-catching machine, and its revision cloud starts to rain.",
+   "pal": [
+    "#0D1116",
+    "#E7F0F9",
+    "#0F2350",
+    "#18336B"
+   ],
+   "real": false
+  },
+  {
+   "slug": "iso-infographic",
+   "num": "45",
+   "en": "Isometric Infographic",
+   "cn": "等距信息图",
+   "cat": "Line Diagrams",
+   "film": "From Bean to Cup",
+   "line": "A coffee's journey from the plantation to your hands, across one isometric world.",
+   "pal": [
+    "#0B1A26",
+    "#DFEAF2",
+    "#4FB3E8",
+    "#F2B33D"
+   ],
+   "real": false
+  },
+  {
+   "slug": "teardown",
+   "num": "46",
+   "en": "Exploded Teardown",
+   "cn": "产品拆解",
+   "cat": "Line Diagrams",
+   "film": "21 Keys, Opened",
+   "line": "Half an open-source keyboard comes apart in one orbit, down to the chip, then closes with its real dimensions.",
+   "pal": [
+    "#0D0E10",
+    "#F1EFE9",
+    "#FF6B3D",
+    "#34363A"
+   ],
+   "real": false
+  },
+  {
+   "slug": "hardcore-info",
+   "num": "47",
+   "en": "Line-Art Cutaway",
+   "cn": "线稿剖面图解",
+   "cat": "Line Diagrams",
+   "film": "Where Is Your Phone's Antenna?",
+   "line": "A phone loses signal when held by the corner; taken apart, its metal frame turns out to be the antenna, cut into pieces your hand can bridge.",
+   "pal": [
+    "#141414",
+    "#FBFBF9",
+    "#FF4D1A",
+    "#5A5955"
+   ],
+   "real": false
+  },
+  {
+   "slug": "precise-mechanism",
+   "num": "48",
+   "en": "Color-Coded Mechanism",
+   "cn": "分色机械图解",
+   "cat": "Line Diagrams",
+   "film": "Three Systems Keep the Time",
+   "line": "A watch with no battery is cut open: its three systems are dyed one by one, the train races when the escapement is pulled out, and one slowed tick lets it all out again.",
+   "pal": [
+    "#25282D",
+    "#F3F0EA",
+    "#E8472A",
+    "#E6B94F"
+   ],
+   "real": false
+  },
+  {
+   "slug": "instruction-manual",
+   "num": "49",
+   "en": "Instruction Manual Art",
+   "cn": "说明书插画",
+   "cat": "Line Diagrams",
+   "film": "Step Ten",
+   "line": "Two first-timers build a crib from a flat-pack manual, ten steps on one 45° page; step ten was never in the manual.",
+   "pal": [
+    "#1E1D1B",
+    "#FFFFFF",
+    "#DEAA1F",
+    "#F2C230"
+   ],
+   "real": false
+  },
+  {
+   "slug": "pen-plotter",
+   "num": "50",
+   "en": "Pen Plotter",
+   "cn": "笔式绘图仪",
+   "cat": "Line Diagrams",
+   "film": "8848.86",
+   "line": "At night under a desk lamp, a pen plotter draws Mount Qomolangma from real elevation data with four pens, and writes its height last.",
+   "pal": [
+    "#16161C",
+    "#F1ECDF",
+    "#CC221A",
+    "#763C1A"
+   ],
+   "real": false
+  },
+  {
+   "slug": "assembly-line-diagram",
+   "num": "51",
+   "en": "Assembly-Line Diagram",
+   "cn": "流水线图解",
+   "cat": "Line Diagrams",
+   "film": "The Disassembly Line",
+   "line": "A body cut open as a factory that runs backwards: a 12:30 sandwich is taken apart station by station, and six hours later it runs for the bus.",
+   "pal": [
+    "#1D2030",
+    "#FBF7EE",
+    "#E04A2F",
+    "#F3B23A"
+   ],
+   "real": false
+  },
+  {
+   "slug": "rubber-hose",
+   "num": "52",
+   "en": "1930s Rubber Hose Cartoon",
+   "cn": "1930s 橡皮管卡通",
+   "cat": "Cartoons",
+   "film": "Coffee Cup Chase",
+   "line": "A coffee cup chases a runaway sugar cube around the kitchen, 1930s-cartoon style.",
+   "pal": [
+    "#16121C",
+    "#FFF4E6",
+    "#FF6B3D",
+    "#5FB4E8"
+   ],
+   "real": false
+  },
+  {
+   "slug": "cel-anime-80s",
+   "num": "53",
+   "en": "80s Cel Anime",
+   "cn": "80 年代赛璐璐动画",
+   "cat": "Cartoons",
+   "film": "City Lights, 1987",
+   "line": "A courier girl rides through a rain-soaked neon city to deliver a tape before the dawn launch.",
+   "pal": [
+    "#16121C",
+    "#FFF4E6",
+    "#FF6B3D",
+    "#5FB4E8"
+   ],
+   "real": false
+  },
+  {
+   "slug": "scifi-toon",
+   "num": "54",
+   "en": "Sci-Fi Sitcom Toon",
+   "cn": "科幻情景喜剧卡通",
+   "cat": "Cartoons",
+   "film": "Coffee Run",
+   "line": "A jaded genius opens a portal just to buy coffee and tumbles through ever-stranger universes.",
+   "pal": [
+    "#16121C",
+    "#FFF4E6",
+    "#FF6B3D",
+    "#5FB4E8"
+   ],
+   "real": false
+  },
+  {
+   "slug": "midcentury-toon",
+   "num": "55",
+   "en": "Mid-century Cartoon",
+   "cn": "50s 扁平卡通",
+   "cat": "Cartoons",
+   "film": "Meet Pip",
+   "line": "A robot vacuum set up in three steps, told like a 1950s classroom film.",
+   "pal": [
+    "#16121C",
+    "#FFF4E6",
+    "#FF6B3D",
+    "#5FB4E8"
+   ],
+   "real": false
+  },
+  {
+   "slug": "comic-history",
+   "num": "56",
+   "en": "Comic History Cartoon",
+   "cn": "搞笑历史卡通",
+   "cat": "Cartoons",
+   "film": "One Piece of Paper",
+   "line": "Alsace-Lorraine changed hands four times between 1871 and 1945: each time someone tore off the paper and pasted a new piece, and the woman living on it never moved.",
+   "pal": [
+    "#2B2219",
+    "#F5E9C4",
+    "#00FF00",
+    "#00B140"
+   ],
+   "real": false
+  },
+  {
+   "slug": "manga-panels",
+   "num": "57",
+   "en": "Manga Panels",
+   "cn": "黑白漫画分格",
+   "cat": "Cartoons",
+   "film": "KOMA ONE: Thirty Frames a Second",
+   "line": "A street photographer chases a running light to the moment the pigeons rise; her pocket camera splits that second into thirty panels.",
+   "pal": [
+    "#121212",
+    "#F3F0E8",
+    "#00FF00",
+    "#FF0000"
+   ],
+   "real": false
+  },
+  {
+   "slug": "pixel-rpg",
+   "num": "58",
+   "en": "16-bit Pixel RPG",
+   "cn": "16-bit 像素 RPG",
+   "cat": "Games",
+   "film": "The Last Save Point",
+   "line": "At the final boss door a hero saves the game, and the save screen replays the whole journey.",
+   "pal": [
+    "#121018",
+    "#E8E6F0",
+    "#7BD44B",
+    "#E0479E"
+   ],
+   "real": false
+  },
+  {
+   "slug": "hd-2d",
+   "num": "59",
+   "en": "2.5D Pixel Art",
+   "cn": "2.5D 像素",
+   "cat": "Games",
+   "film": "The Lampbearer",
+   "line": "The lighthouse goes dark; a girl carries the last flame through a night forest and up the storm cliffs.",
+   "pal": [
+    "#121018",
+    "#E8E6F0",
+    "#7BD44B",
+    "#E0479E"
+   ],
+   "real": false
+  },
+  {
+   "slug": "microgame",
+   "num": "60",
+   "en": "Microgame Frenzy",
+   "cn": "微游戏快闪",
+   "cat": "Games",
+   "film": "Five-Second Astronaut",
+   "line": "A clumsy cadet survives a five-second boot camp, faster and faster, until the boss: landing home.",
+   "pal": [
+    "#2A0F5C",
+    "#FFC928",
+    "#1FD1D1",
+    "#FF2E88"
+   ],
+   "real": false
+  },
+  {
+   "slug": "game-show",
+   "num": "61",
+   "en": "Rhythm Game Show",
+   "cn": "节奏综艺",
+   "cat": "Games",
+   "film": "Rhythm of AI, 1997 → 2026",
+   "line": "The history of AI as a rhythm game: models take the stage on the beat, and a report card closes the show.",
+   "pal": [
+    "#121018",
+    "#E8E6F0",
+    "#7BD44B",
+    "#E0479E"
+   ],
+   "real": false
+  },
+  {
+   "slug": "ascii-crt",
+   "num": "62",
+   "en": "CRT ASCII Terminal",
+   "cn": "CRT 字符终端",
+   "cat": "Film & Tape",
+   "film": "Tranquility.log",
+   "line": "A moon-base AI wakes after forty years to a signal from Earth, and replies by drawing “home” in characters.",
+   "pal": [
+    "#1A1612",
+    "#EFE6D4",
+    "#C9A227",
+    "#7A4E2D"
+   ],
+   "real": false
+  },
+  {
+   "slug": "silent-film",
+   "num": "63",
+   "en": "1920s Silent Film",
+   "cn": "1920s 默片",
+   "cat": "Film & Tape",
+   "film": "The Runaway Loaf",
+   "line": "A baker's boy chases a runaway loaf downhill, then breaks it in half for a hungry girl.",
+   "pal": [
+    "#1A1612",
+    "#EFE6D4",
+    "#C9A227",
+    "#7A4E2D"
+   ],
+   "real": false
+  },
+  {
+   "slug": "backrooms",
+   "num": "64",
+   "en": "Liminal Found Footage",
+   "cn": "后室录像带",
+   "cat": "Film & Tape",
+   "film": "Night Shift Orientation",
+   "line": "A new night-shift hire films their first night in an endless yellow office, following the rules on the wall.",
+   "pal": [
+    "#4D3D26",
+    "#E6ECE6",
+    "#8C763C",
+    "#D5BD66"
+   ],
+   "real": false
+  },
+  {
+   "slug": "scratch-film",
+   "num": "65",
+   "en": "Scratch Film",
+   "cn": "胶片直刻",
+   "cat": "Film & Tape",
+   "film": "The Night Climb",
+   "line": "A finger-long lanternfish climbs half a kilometre in the dark, hides its shadow with its own lights, and turns out to be one of countless animals rising every night.",
+   "pal": [
+    "#050403",
+    "#FFF4DC",
+    "#FFC81C",
+    "#FF3220"
+   ],
+   "real": false
+  },
+  {
+   "slug": "double-exposure",
+   "num": "66",
+   "en": "Double Exposure",
+   "cn": "双重曝光",
+   "cat": "Film & Tape",
+   "film": "Mountains and Seas",
+   "line": "From the mountains to the sea as night falls: a stag, a wolf, an eagle, a salmon and a whale, each carrying its own place inside its silhouette, until the whale's harbour lands on the real shore.",
+   "pal": [
+    "#1A1612",
+    "#EFE6D4",
+    "#C9A227",
+    "#7A4E2D"
+   ],
+   "real": false
+  },
+  {
+   "slug": "dark-keynote",
+   "num": "67",
+   "en": "Dark Tech Keynote",
+   "cn": "暗色科技发布",
+   "cat": "Screens & Interfaces",
+   "film": "Room to Think",
+   "line": "Launch film for Tidy, a fictional app: one buried cursor snaps hundreds of windows back into place.",
+   "pal": [
+    "#060B12",
+    "#CFE7F5",
+    "#37D6C0",
+    "#2266FF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "living-screencast",
+   "num": "68",
+   "en": "Mascot Screencast",
+   "cn": "像素小人录屏",
+   "cat": "Screens & Interfaces",
+   "film": "Clawd Moves In",
+   "line": "Clawd hops out of the terminal into the Claude app and acts out plan mode and self-checks in one take.",
+   "pal": [
+    "#060B12",
+    "#CFE7F5",
+    "#37D6C0",
+    "#2266FF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "hologram-hud",
+   "num": "69",
+   "en": "Sci-fi Hologram HUD",
+   "cn": "科幻全息界面",
+   "cat": "Screens & Interfaces",
+   "film": "Volt · Spec Scan",
+   "line": "An e-bike is scanned into a hologram; target boxes lock onto the battery, motor and brakes.",
+   "pal": [
+    "#060B12",
+    "#CFE7F5",
+    "#37D6C0",
+    "#2266FF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "desktop-flythrough",
+   "num": "70",
+   "en": "Tabletop App Flythrough",
+   "cn": "桌面卡片穿梭",
+   "cat": "Screens & Interfaces",
+   "film": "Before the Ding",
+   "line": "A cat photo hops across app cards on a sunlit desk, from one phone to a friend's.",
+   "pal": [
+    "#1D1A2E",
+    "#FDFDFC",
+    "#E8890C",
+    "#2F8FB0"
+   ],
+   "real": false
+  },
+  {
+   "slug": "spreadsheet",
+   "num": "71",
+   "en": "Spreadsheet Film",
+   "cn": "表格动画",
+   "cat": "Screens & Interfaces",
+   "film": "The Hidden Column",
+   "line": "The total says treatment B; unhide the stone-size columns and A wins every group. Simpson's paradox told in one sheet, 1 cell = 1 patient.",
+   "pal": [
+    "#17120A",
+    "#F1F0EB",
+    "#FFB21F",
+    "#E8382D"
+   ],
+   "real": false
+  },
+  {
+   "slug": "one-bit-dither",
+   "num": "72",
+   "en": "1-bit Dither",
+   "cn": "1-bit 点阵",
+   "cat": "Screens & Interfaces",
+   "film": "The Moon's Fax",
+   "line": "February 1966: the first close-up of the Moon arrives at an English radio telescope as a newspaper fax, printed one line at a time in two inks, a day early and stretched too tall.",
+   "pal": [
+    "#060B12",
+    "#CFE7F5",
+    "#37D6C0",
+    "#2266FF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "circuit-board",
+   "num": "73",
+   "en": "Circuit Board",
+   "cn": "电路板",
+   "cat": "Light & Lines",
+   "film": "Seven Milliseconds",
+   "line": "Rivers become copper traces as current runs 2,080 km from a dam to a phone charger.",
+   "pal": [
+    "#05190F",
+    "#F2EEE1",
+    "#1C6A44",
+    "#D9B25B"
+   ],
+   "real": false
+  },
+  {
+   "slug": "firefly-pointillism",
+   "num": "74",
+   "en": "Firefly Pointillism",
+   "cn": "萤火光点",
+   "cat": "Light & Lines",
+   "film": "Shine Back",
+   "line": "A firefly's blink is a question: a girl gets her answer as a deer, loses every light in a storm, and asks the whole dark with the last one.",
+   "pal": [
+    "#050708",
+    "#F0F2F5",
+    "#73965F",
+    "#96AA70"
+   ],
+   "real": false
+  },
+  {
+   "slug": "flow-field",
+   "num": "75",
+   "en": "Flow-field Wind Lines",
+   "cn": "流场风线",
+   "cat": "Light & Lines",
+   "film": "Typhoon Yagi over Qiongzhou",
+   "line": "Thousands of ink wind lines, computed from the best track, draw Super Typhoon Yagi: the eye opening over the South China Sea, the landfall on Hainan, the spiral coming apart in Vietnam, and a whole week folded into one last line.",
+   "pal": [
+    "#262C38",
+    "#ECE0C4",
+    "#C83A24",
+    "#C46C26"
+   ],
+   "real": false
+  },
+  {
+   "slug": "oscilloscope-math",
+   "num": "76",
+   "en": "Oscilloscope Math",
+   "cn": "示波器数学",
+   "cat": "Light & Lines",
+   "film": "The Gibbs Phenomenon",
+   "line": "How do you roll a square out of circles? Spinning circles stack into a square wave, until a dive into one corner finds the 9% spike that never goes away.",
+   "pal": [
+    "#010402",
+    "#E6FFEC",
+    "#FFB547",
+    "#4DFF88"
+   ],
+   "real": false
+  },
+  {
+   "slug": "neon-tubes",
+   "num": "77",
+   "en": "Neon Tubes",
+   "cn": "霓虹灯管",
+   "cat": "Light & Lines",
+   "film": "Midnight Snack",
+   "line": "A neon cat goes out for the goldfish on the sign at the end of the street, cracks its bowl, and runs the fading fish home through the rain to the goblet on its own sign.",
+   "pal": [
+    "#1A0A24",
+    "#1FF2D9",
+    "#FF2A08",
+    "#FF3D9E"
+   ],
+   "real": false
+  },
+  {
+   "slug": "brick-toy",
+   "num": "78",
+   "en": "Brick Toy",
+   "cn": "积木玩具",
+   "cat": "3D & Miniature",
+   "film": "Rocket from Spare Parts",
+   "line": "A brick astronaut builds a rocket from spare parts and flies to a brick moon.",
+   "pal": [
+    "#1B2A34",
+    "#F2F2EE",
+    "#0055BF",
+    "#C91A09"
+   ],
+   "real": false
+  },
+  {
+   "slug": "paper-popup",
+   "num": "79",
+   "en": "Paper Pop-up Book",
+   "cn": "纸片立体书",
+   "cat": "3D & Miniature",
+   "film": "Pip's Paper Adventure",
+   "line": "A pop-up book opens on a desk; a sprite named Pip adventures through paper worlds and jumps out into ours.",
+   "pal": [
+    "#15181C",
+    "#EDE7DA",
+    "#D98E4A",
+    "#3F7FBF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "tilt-shift",
+   "num": "80",
+   "en": "Tilt-Shift Miniature",
+   "cn": "移轴微缩",
+   "cat": "3D & Miniature",
+   "film": "Toy Town Rush Hour",
+   "line": "Morning rush hour in a town that looks like a model: traffic, trains and tiny people.",
+   "pal": [
+    "#15181C",
+    "#EDE7DA",
+    "#D98E4A",
+    "#3F7FBF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "lowpoly-island",
+   "num": "81",
+   "en": "Low-poly Isometric Island",
+   "cn": "低多边形等距",
+   "cat": "3D & Miniature",
+   "film": "The Island That Grew",
+   "line": "An island and its village grow tile by tile from an empty sea, each tile a note, into a starry night.",
+   "pal": [
+    "#15181C",
+    "#EDE7DA",
+    "#D98E4A",
+    "#3F7FBF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "glass-product",
+   "num": "82",
+   "en": "Glass Product Render",
+   "cn": "玻璃质感产品",
+   "cat": "3D & Miniature",
+   "film": "Aura — Hear the Light",
+   "line": "Unboxing and close-ups of Aura, fictional glass earbuds, in strip-light sweeps and caustics.",
+   "pal": [
+    "#15181C",
+    "#EDE7DA",
+    "#D98E4A",
+    "#3F7FBF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "memphis-diorama",
+   "num": "83",
+   "en": "Memphis Diorama",
+   "cn": "孟菲斯微缩景观",
+   "cat": "3D & Miniature",
+   "film": "Four Seasons in Pomelo Town",
+   "line": "One river bend, four seasons, one take; each turns when the big tree squats and springs back.",
+   "pal": [
+    "#25214A",
+    "#FFFCF6",
+    "#2F5BFF",
+    "#FFD234"
+   ],
+   "real": false
+  },
+  {
+   "slug": "isometric-picture-book",
+   "num": "84",
+   "en": "Isometric People Scene",
+   "cn": "等距小人场景",
+   "cat": "3D & Miniature",
+   "film": "Seventy-Two Seats",
+   "line": "Travellers board an isometric plane, and the order shows why one way is nearly twice as fast.",
+   "pal": [
+    "#2A2E29",
+    "#F1E8D8",
+    "#E2AE3A",
+    "#D0573A"
+   ],
+   "real": false
+  },
+  {
+   "slug": "crayon-world",
+   "num": "85",
+   "en": "Crayon World 3D",
+   "cn": "蜡笔立体世界",
+   "cat": "3D & Miniature",
+   "film": "The Butterfly",
+   "line": "A first-person flight over a crayon village to one flower in an old man's garden; then his eyes, and what he says.",
+   "pal": [
+    "#15181C",
+    "#EDE7DA",
+    "#D98E4A",
+    "#3F7FBF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "satellite-briefing",
+   "num": "86",
+   "en": "Satellite Briefing",
+   "cn": "卫星简报",
+   "cat": "Instruments & Evidence",
+   "film": "The Map Still Says Sea",
+   "line": "A satellite follows the map to the Aral Sea and finds a desert; only the part someone dammed came back.",
+   "pal": [
+    "#070B0E",
+    "#F2F5F6",
+    "#FFBE55",
+    "#A1A7A9"
+   ],
+   "real": false
+  },
+  {
+   "slug": "briefing-board",
+   "num": "87",
+   "en": "Engineering Briefing Board",
+   "cn": "工程简报板",
+   "cat": "Instruments & Evidence",
+   "film": "The Ship Decides",
+   "line": "Four bridge types are tested on one briefing wall, and the ship that must pass under picks the winner.",
+   "pal": [
+    "#0A0F0C",
+    "#E4F0DC",
+    "#8CBF3F",
+    "#C9A227"
+   ],
+   "real": false
+  },
+  {
+   "slug": "lidar-survey",
+   "num": "88",
+   "en": "LiDAR Survey",
+   "cn": "点云测绘",
+   "cat": "Instruments & Evidence",
+   "film": "The Fields Under the Forest",
+   "line": "A laser survey strips the canopy off a Connecticut forest and finds 3.4 km of old farm walls.",
+   "pal": [
+    "#05080A",
+    "#D4FFF0",
+    "#FFB347",
+    "#1F3F35"
+   ],
+   "real": false
+  },
+  {
+   "slug": "microscope",
+   "num": "89",
+   "en": "Under the Microscope",
+   "cn": "显微镜下",
+   "cat": "Instruments & Evidence",
+   "film": "Measured Blue",
+   "line": "One continuous move from a liver slide to a single nucleus; two circles, counted pixel by pixel, differ 2.4 times in blue.",
+   "pal": [
+    "#0A0F0C",
+    "#E4F0DC",
+    "#8CBF3F",
+    "#C9A227"
+   ],
+   "real": false
+  },
+  {
+   "slug": "archive-lighttable",
+   "num": "90",
+   "en": "Archive Light Table",
+   "cn": "档案看片台",
+   "cat": "Instruments & Evidence",
+   "film": "Two Seconds Short",
+   "line": "The telegram said 57 seconds; under a loupe, the Wrights' glass negatives and the archive say 59.",
+   "pal": [
+    "#0A0F0C",
+    "#E4F0DC",
+    "#8CBF3F",
+    "#C9A227"
+   ],
+   "real": false
+  },
+  {
+   "slug": "security-xray",
+   "num": "91",
+   "en": "Security X-ray",
+   "cn": "安检 X 光",
+   "cat": "Instruments & Evidence",
+   "film": "Night Shift at Lane 3",
+   "line": "One night at an airport screening console: a power bank, a bottle of water, and six live crabs that move in the CT.",
+   "pal": [
+    "#0A0F0C",
+    "#E4F0DC",
+    "#8CBF3F",
+    "#C9A227"
+   ],
+   "real": false
+  },
+  {
+   "slug": "dark-documentary",
+   "num": "92",
+   "en": "Radar Sweep Documentary",
+   "cn": "雷达扫描纪录片",
+   "cat": "Instruments & Evidence",
+   "film": "Catching the Moon",
+   "line": "A storm at Parkes, 21 July 1969: a 64-metre dish tipped to its limit holds on and catches the moonwalk for the world.",
+   "pal": [
+    "#3B3F44",
+    "#EEF2F6",
+    "#FF8C78",
+    "#F2C48D"
+   ],
+   "real": false
+  },
+  {
+   "slug": "thermal-camera",
+   "num": "93",
+   "en": "Thermal Camera",
+   "cn": "热成像",
+   "cat": "Instruments & Evidence",
+   "film": "A Building on a Winter Night",
+   "line": "A thermal camera circles an old apartment block on a snowy night: a leaking window, pipes inside the walls, a cat asleep on a warm bonnet, and the same block a year after its retrofit.",
+   "pal": [
+    "#000008",
+    "#FFFADB",
+    "#4D0894",
+    "#120554"
+   ],
+   "real": false
+  },
+  {
+   "slug": "dataviz",
+   "num": "94",
+   "en": "Data Storytelling",
+   "cn": "数据叙事",
+   "cat": "Data & Maps",
+   "film": "A Hundred Summers",
+   "line": "A hundred years of summer temperatures, where the chart itself tells the story.",
+   "pal": [
+    "#0C1116",
+    "#F4EEE1",
+    "#EC5B3E",
+    "#3F7FBF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "white-model",
+   "num": "95",
+   "en": "Projection-Mapped Model",
+   "cn": "白模投影",
+   "cat": "Data & Maps",
+   "film": "How a Flattened City Grew Back",
+   "line": "A projector paints Rotterdam's white model layer by layer, from the 1940 gap to today's towers.",
+   "pal": [
+    "#0C1116",
+    "#F4EEE1",
+    "#EC5B3E",
+    "#3F7FBF"
+   ],
+   "real": false
+  },
+  {
+   "slug": "data-physical",
+   "num": "96",
+   "en": "Data Physicalization",
+   "cn": "数据实物化",
+   "cat": "Data & Maps",
+   "film": "Two Spirals",
+   "line": "Twelve years of wind and solar stacked as real plates, spiralling round a walnut dial until solar overtakes.",
+   "pal": [
+    "#1C1D20",
+    "#C8CCD1",
+    "#D4521C",
+    "#D2B07A"
+   ],
+   "real": false
+  },
+  {
+   "slug": "transit-map",
+   "num": "97",
+   "en": "Transit Map",
+   "cn": "地铁线路图",
+   "cat": "Data & Maps",
+   "film": "6 Kilometres",
+   "line": "A printed metro map grows from one 6 km line in 1993 to 21 lines and 906 km.",
+   "pal": [
+    "#1B1918",
+    "#F2EEE5",
+    "#E3002B",
+    "#24346E"
+   ],
+   "real": false
+  },
+  {
+   "slug": "map-explainer",
+   "num": "98",
+   "en": "3D Map Explainer",
+   "cn": "立体地图解说",
+   "cat": "Data & Maps",
+   "film": "Strait of Hormuz",
+   "line": "From the globe down into the strait a fifth of the world's oil squeezes through: two lanes, a cut through the sea floor, and pipelines that can carry only a fraction of it around.",
+   "pal": [
+    "#0E2230",
+    "#F6EEE0",
+    "#FFA63D",
+    "#2FA3B0"
+   ],
+   "real": false
+  },
+  {
+   "slug": "pip-simulation",
+   "num": "99",
+   "en": "Blob Simulation",
+   "cn": "小人模拟实验",
+   "cat": "Data & Maps",
+   "film": "Is Faster Better?",
+   "line": "160 flocked Pips race for beans: the fast ones eat first and run dry first, and after 20 generations the board turns blue.",
+   "pal": [
+    "#262A3B",
+    "#FFF7EA",
+    "#F6BE45",
+    "#F2604A"
+   ],
+   "real": false
+  },
+  {
+   "slug": "_template",
+   "num": "",
+   "en": "My Style",
+   "cn": "我的风格",
+   "cat": "Graphic & Type",
+   "film": "Title of the Demo Film",
+   "line": "One sentence: what happens in the demo film.",
+   "pal": [
+    "#111111",
+    "#F7F3EA",
+    "#FF4D2E",
+    "#3B5BDB"
+   ],
+   "real": false
+  }
+ ]
+}

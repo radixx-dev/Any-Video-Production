@@ -21,3 +21,6 @@ mix*.flac
 events.json
 *.log
 .DS_Store
+
+# generated style-card sheets (previews are committed instead)
+tools/card/sheets/

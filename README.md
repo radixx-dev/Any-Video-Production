@@ -186,71 +186,110 @@ Scores **length, specificity, stakes, frontload**, plus spoken time. The report 
 | `lemo-opuscar` | fetches the engine library, then follows its `AGENTS.md` | [lemomo-ai/lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) |
 | `earshot` | listening, choosing, measuring and verifying sound | [Leonxlnx/earshot](https://github.com/Leonxlnx/earshot) |
 
-## The engine: 100 styles
+## The gallery: all 100 styles
 
-The style library is fetched on first run into `~/lemo-opuscar`. Each style is a `STYLE.md` of fixed invariants — look, colour, type, motion grammar, camera, sound palette, native moves, pitfalls — plus a demo film made entirely in code. Pick one, keep the invariants, direct the rest yourself.
+One card per style, in the library's own categories. Each card uses that style's palette and grammar, read straight out of its `STYLE.md` — these are **spec cards, not demo frames**: only two styles in the library ship a runnable demo (`halftone-dossier`, `paper-lantern`). Open `styles/<slug>/STYLE.md` in the library for the invariants; regenerate the set with `./tools/card/render.sh`.
 
-| Family | Examples |
-|---|---|
-| Painting & illustration | Impasto Oil Painting · Watercolor Brush · Urban Sketch · Colored-Pencil Science |
-| Sketch & board | Whiteboard Explainer · Chalkboard · Sketchnote · Marker on Paper · One-line Drawing |
-| Traditional crafts | Chinese Ink Wash · Ukiyo-e · Red Paper-cut · Paper-cut Lightbox · Stained Glass |
-| Print & printmaking | Halftone Dossier · Risograph · Woodcut · Copperplate · Silkscreen Travel |
-| Graphic & type | Swiss Motion · 60s Spy Title · Art Deco · Bauhaus · Pictogram Motion |
-| Line diagrams | Blueprint · Isometric Infographic · Exploded Teardown · Pen Plotter |
-| Cartoons & games | 80s Cel Anime · Rubber Hose · 16-bit Pixel RPG · 2.5D Pixel |
-| Film & tape | CRT ASCII · 1920s Silent · Liminal Found Footage · Double Exposure |
-| Screens & instruments | Dark Tech Keynote · Hologram HUD · Satellite Briefing · LiDAR Survey · Security X-ray |
+### Edit &amp; Documentary · 8
 
-Styles marked `✦` draw characters or panels with an image generator and need one configured (`python3 core/image/gen_image.py --check`). Without it, that style cannot start — the repo says so before the brief rather than shipping a stand-in.
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/caption-news.jpg" width="230" alt="Caption News"><br><sub><b>Caption News</b><br><code>caption-news</code></sub></td><td align="center" width="20%"><img src="styles/previews/newsreel.jpg" width="230" alt="1920s Newsreel"><br><sub><b>1920s Newsreel</b><br><code>newsreel</code></sub></td><td align="center" width="20%"><img src="styles/previews/countdown.jpg" width="230" alt="Live Countdown Split-screen"><br><sub><b>Live Countdown Split-screen</b><br><code>countdown</code></sub></td><td align="center" width="20%"><img src="styles/previews/city-symphony.jpg" width="230" alt="City Symphony"><br><sub><b>City Symphony</b><br><code>city-symphony</code></sub></td><td align="center" width="20%"><img src="styles/previews/visual-investigation.jpg" width="230" alt="Visual Investigation"><br><sub><b>Visual Investigation</b><br><code>visual-investigation</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/kino-montage.jpg" width="230" alt="Constructivist Montage"><br><sub><b>Constructivist Montage</b><br><code>kino-montage</code></sub></td><td align="center" width="20%"><img src="styles/previews/telestrator.jpg" width="230" alt="Sports Telestrator"><br><sub><b>Sports Telestrator</b><br><code>telestrator</code></sub></td><td align="center" width="20%"><img src="styles/previews/news-package.jpg" width="230" alt="Broadcast News Package"><br><sub><b>Broadcast News Package</b><br><code>news-package</code></sub></td></tr>
+</table>
 
-## Sound, not decoration
+### Painting &amp; Illustration · 5
 
-earshot ships a **252-sound** procedural bank plus the tooling to judge it: durations, transient peaks, pitch, kinds. The rules this repo enforces around it:
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/crayon-book.jpg" width="230" alt="Crayon Picture Book"><br><sub><b>Crayon Picture Book</b><br><code>crayon-book</code></sub></td><td align="center" width="20%"><img src="styles/previews/watercolor.jpg" width="230" alt="Watercolor Brush"><br><sub><b>Watercolor Brush</b><br><code>watercolor</code></sub></td><td align="center" width="20%"><img src="styles/previews/impasto.jpg" width="230" alt="Impasto Oil Painting"><br><sub><b>Impasto Oil Painting</b><br><code>impasto</code></sub></td><td align="center" width="20%"><img src="styles/previews/urban-sketch.jpg" width="230" alt="Urban Sketch · Pen &amp; Wash"><br><sub><b>Urban Sketch · Pen &amp; Wash</b><br><code>urban-sketch</code></sub></td><td align="center" width="20%"><img src="styles/previews/colored-pencil.jpg" width="230" alt="Colored-Pencil Science Illustration"><br><sub><b>Colored-Pencil Science Illustration</b><br><code>colored-pencil</code></sub></td></tr>
+</table>
 
-- **One sound per visible action**, matched to the material — paper, wood, metal, ink and glass do not sound alike.
-- **Peaks within ~8 dB of the voice peak**, placed one frame after the picture move.
-- **No music.** Voice and foley only.
-- **Measured, never assumed.** `mux.sh` masters to −14 LUFS / ≤ −1 dBTP and prints the number; that number gets reported.
+### Sketch &amp; Board · 7
 
-## House rules
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/one-line.jpg" width="230" alt="One-line Drawing"><br><sub><b>One-line Drawing</b><br><code>one-line</code></sub></td><td align="center" width="20%"><img src="styles/previews/whiteboard.jpg" width="230" alt="Whiteboard Explainer"><br><sub><b>Whiteboard Explainer</b><br><code>whiteboard</code></sub></td><td align="center" width="20%"><img src="styles/previews/chalkboard.jpg" width="230" alt="Chalkboard"><br><sub><b>Chalkboard</b><br><code>chalkboard</code></sub></td><td align="center" width="20%"><img src="styles/previews/sketchnote.jpg" width="230" alt="Sketchnote"><br><sub><b>Sketchnote</b><br><code>sketchnote</code></sub></td><td align="center" width="20%"><img src="styles/previews/stick-explainer.jpg" width="230" alt="Stick-figure Explainer"><br><sub><b>Stick-figure Explainer</b><br><code>stick-explainer</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/ipad-sketch.jpg" width="230" alt="Tablet Sketch Explainer"><br><sub><b>Tablet Sketch Explainer</b><br><code>ipad-sketch</code></sub></td><td align="center" width="20%"><img src="styles/previews/marker-paper.jpg" width="230" alt="Marker on Paper"><br><sub><b>Marker on Paper</b><br><code>marker-paper</code></sub></td></tr>
+</table>
 
-From `AGENTS.md`, and they win over any style's own spec:
+### Traditional Crafts · 7
 
-| Rule | Effect |
-|---|---|
-| Minecraft font | every on-screen letter, whatever the style names |
-| No faces, no human figures | people become objects, silhouettes or the mascot |
-| The mascot belongs in the performance | canonical asset, never redrawn or recoloured |
-| No engagement-bait CTAs | no "comment a word", no follow-for-part-2 |
-| 16:9 1920×1080 at 30 fps by default | vertical 1080×1920 only when asked (the engine defaults to 24 — the wrappers pass 30) |
-| A structural beat every 2–3 s | cuts, re-layouts, camera moves — not glow or drift |
-| Source every claim | primary page, quoted verbatim, URL recorded |
-| Report honestly | a check that failed is reported as failed, audio as measured not heard |
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/ink-wash.jpg" width="230" alt="Chinese Ink Wash"><br><sub><b>Chinese Ink Wash</b><br><code>ink-wash</code></sub></td><td align="center" width="20%"><img src="styles/previews/shadow-puppet.jpg" width="230" alt="Shadow Puppetry"><br><sub><b>Shadow Puppetry</b><br><code>shadow-puppet</code></sub></td><td align="center" width="20%"><img src="styles/previews/ukiyoe.jpg" width="230" alt="Ukiyo-e"><br><sub><b>Ukiyo-e</b><br><code>ukiyoe</code></sub></td><td align="center" width="20%"><img src="styles/previews/papercut-red.jpg" width="230" alt="Red Paper-cut"><br><sub><b>Red Paper-cut</b><br><code>papercut-red</code></sub></td><td align="center" width="20%"><img src="styles/previews/paper-lantern.jpg" width="230" alt="Paper-cut Lightbox"><br><sub><b>Paper-cut Lightbox</b><br><code>paper-lantern</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/stained-glass.jpg" width="230" alt="Stained Glass"><br><sub><b>Stained Glass</b><br><code>stained-glass</code></sub></td><td align="center" width="20%"><img src="styles/previews/gilded-illumination.jpg" width="230" alt="Gilded Illumination"><br><sub><b>Gilded Illumination</b><br><code>gilded-illumination</code></sub></td></tr>
+</table>
 
-## Character animation (optional)
+### Print &amp; Printmaking · 8
 
-Not every film wants kinetic type. When a story needs **Clawd acting** — a costume, a reaction, a dance,
-a specific emotion — use [JohnHeibel/ClaudeAnimationBase](https://github.com/JohnHeibel/ClaudeAnimationBase)
-(MIT, ~3k★). It is a separate starter kit, not a dependency of this repo, and it does not need Lemo:
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/risograph.jpg" width="230" alt="Risograph Print"><br><sub><b>Risograph Print</b><br><code>risograph</code></sub></td><td align="center" width="20%"><img src="styles/previews/halftone-dossier.jpg" width="230" alt="Halftone Dossier"><br><sub><b>Halftone Dossier</b><br><code>halftone-dossier</code></sub></td><td align="center" width="20%"><img src="styles/previews/woodcut.jpg" width="230" alt="Woodcut Print"><br><sub><b>Woodcut Print</b><br><code>woodcut</code></sub></td><td align="center" width="20%"><img src="styles/previews/engraving.jpg" width="230" alt="Copperplate Engraving"><br><sub><b>Copperplate Engraving</b><br><code>engraving</code></sub></td><td align="center" width="20%"><img src="styles/previews/silkscreen-poster.jpg" width="230" alt="Silkscreen Travel Poster"><br><sub><b>Silkscreen Travel Poster</b><br><code>silkscreen-poster</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/printed-long-take.jpg" width="230" alt="Scratchboard Long Take"><br><sub><b>Scratchboard Long Take</b><br><code>printed-long-take</code></sub></td><td align="center" width="20%"><img src="styles/previews/pop-art.jpg" width="230" alt="Pop Art"><br><sub><b>Pop Art</b><br><code>pop-art</code></sub></td><td align="center" width="20%"><img src="styles/previews/vintage-collage.jpg" width="230" alt="Vintage Engraving Collage"><br><sub><b>Vintage Engraving Collage</b><br><code>vintage-collage</code></sub></td></tr>
+</table>
 
-- **31 acted emotions** plus views, eyes, mouths, hats, emotes and dances for the Clawd rig
-  (`src/clawd.js`), drawn with p5.js + p5.brush for a hand-painted look
-- a headless renderer (`render.mjs`) with contact sheets, frame strips, crops, stills and MP4, plus
-  `studio.html` to scrub the timeline in Chrome
-- `ANIMATION_GUIDE.md` with the rules it follows: handmade, alive, one piece, no text, transitions
-  always, something happens in every scene
+### Graphic &amp; Type · 9
 
-```bash
-git clone https://github.com/JohnHeibel/ClaudeAnimationBase && cd ClaudeAnimationBase
-npm install
-node render.mjs --clip --out=out/video.mp4     # 11 s demo; --soft-gl without a GPU, --chrome=<path> if needed
-```
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/swiss-motion.jpg" width="230" alt="Swiss Motion Graphics"><br><sub><b>Swiss Motion Graphics</b><br><code>swiss-motion</code></sub></td><td align="center" width="20%"><img src="styles/previews/spy-titles.jpg" width="230" alt="60s Spy Title Sequence"><br><sub><b>60s Spy Title Sequence</b><br><code>spy-titles</code></sub></td><td align="center" width="20%"><img src="styles/previews/art-deco.jpg" width="230" alt="Art Deco"><br><sub><b>Art Deco</b><br><code>art-deco</code></sub></td><td align="center" width="20%"><img src="styles/previews/pictogram-motion.jpg" width="230" alt="Pictogram Motion"><br><sub><b>Pictogram Motion</b><br><code>pictogram-motion</code></sub></td><td align="center" width="20%"><img src="styles/previews/bauhaus-shapes.jpg" width="230" alt="Bauhaus Shapes"><br><sub><b>Bauhaus Shapes</b><br><code>bauhaus-shapes</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/flat-space-explainer.jpg" width="230" alt="Scale Zoom Explainer"><br><sub><b>Scale Zoom Explainer</b><br><code>flat-space-explainer</code></sub></td><td align="center" width="20%"><img src="styles/previews/text-flash-cuts.jpg" width="230" alt="Text Flash Cuts"><br><sub><b>Text Flash Cuts</b><br><code>text-flash-cuts</code></sub></td><td align="center" width="20%"><img src="styles/previews/silhouette-rhythm.jpg" width="230" alt="Silhouette Rhythm"><br><sub><b>Silhouette Rhythm</b><br><code>silhouette-rhythm</code></sub></td><td align="center" width="20%"><img src="styles/previews/_template.jpg" width="230" alt="My Style"><br><sub><b>My Style</b><br><code>_template</code></sub></td></tr>
+</table>
 
-How the two fit together: ClaudeAnimationBase renders character shots with emotions; Lemo renders
-graphic and typographic shots. Render each to its own MP4 and cut them together — the mascot keeps the
-same look because both draw the canonical `clawd-kufi.svg` design. It needs Node, Chrome and ffmpeg,
-all of which this repo already requires.
+### Line Diagrams · 8
+
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/blueprint.jpg" width="230" alt="Blueprint"><br><sub><b>Blueprint</b><br><code>blueprint</code></sub></td><td align="center" width="20%"><img src="styles/previews/iso-infographic.jpg" width="230" alt="Isometric Infographic"><br><sub><b>Isometric Infographic</b><br><code>iso-infographic</code></sub></td><td align="center" width="20%"><img src="styles/previews/teardown.jpg" width="230" alt="Exploded Teardown"><br><sub><b>Exploded Teardown</b><br><code>teardown</code></sub></td><td align="center" width="20%"><img src="styles/previews/hardcore-info.jpg" width="230" alt="Line-Art Cutaway"><br><sub><b>Line-Art Cutaway</b><br><code>hardcore-info</code></sub></td><td align="center" width="20%"><img src="styles/previews/precise-mechanism.jpg" width="230" alt="Color-Coded Mechanism"><br><sub><b>Color-Coded Mechanism</b><br><code>precise-mechanism</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/instruction-manual.jpg" width="230" alt="Instruction Manual Art"><br><sub><b>Instruction Manual Art</b><br><code>instruction-manual</code></sub></td><td align="center" width="20%"><img src="styles/previews/pen-plotter.jpg" width="230" alt="Pen Plotter"><br><sub><b>Pen Plotter</b><br><code>pen-plotter</code></sub></td><td align="center" width="20%"><img src="styles/previews/assembly-line-diagram.jpg" width="230" alt="Assembly-Line Diagram"><br><sub><b>Assembly-Line Diagram</b><br><code>assembly-line-diagram</code></sub></td></tr>
+</table>
+
+### Cartoons · 6
+
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/rubber-hose.jpg" width="230" alt="1930s Rubber Hose Cartoon"><br><sub><b>1930s Rubber Hose Cartoon</b><br><code>rubber-hose</code></sub></td><td align="center" width="20%"><img src="styles/previews/cel-anime-80s.jpg" width="230" alt="80s Cel Anime"><br><sub><b>80s Cel Anime</b><br><code>cel-anime-80s</code></sub></td><td align="center" width="20%"><img src="styles/previews/scifi-toon.jpg" width="230" alt="Sci-Fi Sitcom Toon"><br><sub><b>Sci-Fi Sitcom Toon</b><br><code>scifi-toon</code></sub></td><td align="center" width="20%"><img src="styles/previews/midcentury-toon.jpg" width="230" alt="Mid-century Cartoon"><br><sub><b>Mid-century Cartoon</b><br><code>midcentury-toon</code></sub></td><td align="center" width="20%"><img src="styles/previews/comic-history.jpg" width="230" alt="Comic History Cartoon"><br><sub><b>Comic History Cartoon</b><br><code>comic-history</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/manga-panels.jpg" width="230" alt="Manga Panels"><br><sub><b>Manga Panels</b><br><code>manga-panels</code></sub></td></tr>
+</table>
+
+### Games · 4
+
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/pixel-rpg.jpg" width="230" alt="16-bit Pixel RPG"><br><sub><b>16-bit Pixel RPG</b><br><code>pixel-rpg</code></sub></td><td align="center" width="20%"><img src="styles/previews/hd-2d.jpg" width="230" alt="2.5D Pixel Art"><br><sub><b>2.5D Pixel Art</b><br><code>hd-2d</code></sub></td><td align="center" width="20%"><img src="styles/previews/microgame.jpg" width="230" alt="Microgame Frenzy"><br><sub><b>Microgame Frenzy</b><br><code>microgame</code></sub></td><td align="center" width="20%"><img src="styles/previews/game-show.jpg" width="230" alt="Rhythm Game Show"><br><sub><b>Rhythm Game Show</b><br><code>game-show</code></sub></td></tr>
+</table>
+
+### Film &amp; Tape · 5
+
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/ascii-crt.jpg" width="230" alt="CRT ASCII Terminal"><br><sub><b>CRT ASCII Terminal</b><br><code>ascii-crt</code></sub></td><td align="center" width="20%"><img src="styles/previews/silent-film.jpg" width="230" alt="1920s Silent Film"><br><sub><b>1920s Silent Film</b><br><code>silent-film</code></sub></td><td align="center" width="20%"><img src="styles/previews/backrooms.jpg" width="230" alt="Liminal Found Footage"><br><sub><b>Liminal Found Footage</b><br><code>backrooms</code></sub></td><td align="center" width="20%"><img src="styles/previews/scratch-film.jpg" width="230" alt="Scratch Film"><br><sub><b>Scratch Film</b><br><code>scratch-film</code></sub></td><td align="center" width="20%"><img src="styles/previews/double-exposure.jpg" width="230" alt="Double Exposure"><br><sub><b>Double Exposure</b><br><code>double-exposure</code></sub></td></tr>
+</table>
+
+### Screens &amp; Interfaces · 6
+
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/dark-keynote.jpg" width="230" alt="Dark Tech Keynote"><br><sub><b>Dark Tech Keynote</b><br><code>dark-keynote</code></sub></td><td align="center" width="20%"><img src="styles/previews/living-screencast.jpg" width="230" alt="Mascot Screencast"><br><sub><b>Mascot Screencast</b><br><code>living-screencast</code></sub></td><td align="center" width="20%"><img src="styles/previews/hologram-hud.jpg" width="230" alt="Sci-fi Hologram HUD"><br><sub><b>Sci-fi Hologram HUD</b><br><code>hologram-hud</code></sub></td><td align="center" width="20%"><img src="styles/previews/desktop-flythrough.jpg" width="230" alt="Tabletop App Flythrough"><br><sub><b>Tabletop App Flythrough</b><br><code>desktop-flythrough</code></sub></td><td align="center" width="20%"><img src="styles/previews/spreadsheet.jpg" width="230" alt="Spreadsheet Film"><br><sub><b>Spreadsheet Film</b><br><code>spreadsheet</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/one-bit-dither.jpg" width="230" alt="1-bit Dither"><br><sub><b>1-bit Dither</b><br><code>one-bit-dither</code></sub></td></tr>
+</table>
+
+### Light &amp; Lines · 5
+
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/circuit-board.jpg" width="230" alt="Circuit Board"><br><sub><b>Circuit Board</b><br><code>circuit-board</code></sub></td><td align="center" width="20%"><img src="styles/previews/firefly-pointillism.jpg" width="230" alt="Firefly Pointillism"><br><sub><b>Firefly Pointillism</b><br><code>firefly-pointillism</code></sub></td><td align="center" width="20%"><img src="styles/previews/flow-field.jpg" width="230" alt="Flow-field Wind Lines"><br><sub><b>Flow-field Wind Lines</b><br><code>flow-field</code></sub></td><td align="center" width="20%"><img src="styles/previews/oscilloscope-math.jpg" width="230" alt="Oscilloscope Math"><br><sub><b>Oscilloscope Math</b><br><code>oscilloscope-math</code></sub></td><td align="center" width="20%"><img src="styles/previews/neon-tubes.jpg" width="230" alt="Neon Tubes"><br><sub><b>Neon Tubes</b><br><code>neon-tubes</code></sub></td></tr>
+</table>
+
+### 3D &amp; Miniature · 8
+
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/brick-toy.jpg" width="230" alt="Brick Toy"><br><sub><b>Brick Toy</b><br><code>brick-toy</code></sub></td><td align="center" width="20%"><img src="styles/previews/paper-popup.jpg" width="230" alt="Paper Pop-up Book"><br><sub><b>Paper Pop-up Book</b><br><code>paper-popup</code></sub></td><td align="center" width="20%"><img src="styles/previews/tilt-shift.jpg" width="230" alt="Tilt-Shift Miniature"><br><sub><b>Tilt-Shift Miniature</b><br><code>tilt-shift</code></sub></td><td align="center" width="20%"><img src="styles/previews/lowpoly-island.jpg" width="230" alt="Low-poly Isometric Island"><br><sub><b>Low-poly Isometric Island</b><br><code>lowpoly-island</code></sub></td><td align="center" width="20%"><img src="styles/previews/glass-product.jpg" width="230" alt="Glass Product Render"><br><sub><b>Glass Product Render</b><br><code>glass-product</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/memphis-diorama.jpg" width="230" alt="Memphis Diorama"><br><sub><b>Memphis Diorama</b><br><code>memphis-diorama</code></sub></td><td align="center" width="20%"><img src="styles/previews/isometric-picture-book.jpg" width="230" alt="Isometric People Scene"><br><sub><b>Isometric People Scene</b><br><code>isometric-picture-book</code></sub></td><td align="center" width="20%"><img src="styles/previews/crayon-world.jpg" width="230" alt="Crayon World 3D"><br><sub><b>Crayon World 3D</b><br><code>crayon-world</code></sub></td></tr>
+</table>
+
+### Instruments &amp; Evidence · 8
+
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/satellite-briefing.jpg" width="230" alt="Satellite Briefing"><br><sub><b>Satellite Briefing</b><br><code>satellite-briefing</code></sub></td><td align="center" width="20%"><img src="styles/previews/briefing-board.jpg" width="230" alt="Engineering Briefing Board"><br><sub><b>Engineering Briefing Board</b><br><code>briefing-board</code></sub></td><td align="center" width="20%"><img src="styles/previews/lidar-survey.jpg" width="230" alt="LiDAR Survey"><br><sub><b>LiDAR Survey</b><br><code>lidar-survey</code></sub></td><td align="center" width="20%"><img src="styles/previews/microscope.jpg" width="230" alt="Under the Microscope"><br><sub><b>Under the Microscope</b><br><code>microscope</code></sub></td><td align="center" width="20%"><img src="styles/previews/archive-lighttable.jpg" width="230" alt="Archive Light Table"><br><sub><b>Archive Light Table</b><br><code>archive-lighttable</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/security-xray.jpg" width="230" alt="Security X-ray"><br><sub><b>Security X-ray</b><br><code>security-xray</code></sub></td><td align="center" width="20%"><img src="styles/previews/dark-documentary.jpg" width="230" alt="Radar Sweep Documentary"><br><sub><b>Radar Sweep Documentary</b><br><code>dark-documentary</code></sub></td><td align="center" width="20%"><img src="styles/previews/thermal-camera.jpg" width="230" alt="Thermal Camera"><br><sub><b>Thermal Camera</b><br><code>thermal-camera</code></sub></td></tr>
+</table>
+
+### Data &amp; Maps · 6
+
+<table>
+<tr><td align="center" width="20%"><img src="styles/previews/dataviz.jpg" width="230" alt="Data Storytelling"><br><sub><b>Data Storytelling</b><br><code>dataviz</code></sub></td><td align="center" width="20%"><img src="styles/previews/white-model.jpg" width="230" alt="Projection-Mapped Model"><br><sub><b>Projection-Mapped Model</b><br><code>white-model</code></sub></td><td align="center" width="20%"><img src="styles/previews/data-physical.jpg" width="230" alt="Data Physicalization"><br><sub><b>Data Physicalization</b><br><code>data-physical</code></sub></td><td align="center" width="20%"><img src="styles/previews/transit-map.jpg" width="230" alt="Transit Map"><br><sub><b>Transit Map</b><br><code>transit-map</code></sub></td><td align="center" width="20%"><img src="styles/previews/map-explainer.jpg" width="230" alt="3D Map Explainer"><br><sub><b>3D Map Explainer</b><br><code>map-explainer</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/pip-simulation.jpg" width="230" alt="Blob Simulation"><br><sub><b>Blob Simulation</b><br><code>pip-simulation</code></sub></td></tr>
+</table>
 
 ## Sound
 
@@ -329,7 +368,7 @@ Full detail in [`CREDITS.md`](CREDITS.md).
 - [ ] a shipped example film, with stills in this README
 - [ ] a script-writing skill so stage 2 is a tool, not only judgement
 - [ ] caption and Threads variants generated from the film's own script
-- [ ] a style previewer: contact sheets for 3 candidate styles before committing
+- [ ] preview all five beats of a style, not just one card, before committing to it
 
 ## Contributing
 
