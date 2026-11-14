@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>sfx-ab</title>
+<style>
+  @font-face { font-family: 'Minecraft'; src: url('fonts/MinecraftRegular-Bmg3.otf'); font-weight: 400; }
+  @font-face { font-family: 'Minecraft'; src: url('fonts/MinecraftBold-nMK1.otf'); font-weight: 700; }
+  html, body { margin: 0; background: #0B0F14; }
+  canvas { display: block; }
+</style>
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+// 10 s sound test: five structural beats (0, 2, 4, 6, 8), one screen each.
+// Picture is a pure function of t — no Date.now(), no unseeded random.
+const c = document.getElementById('c'), x = c.getContext('2d');
+const W = c.width, H = c.height;
+const INK = '#F4EEE1', DIM = '#5C6B7A', ACC = '#EC5B3E', LINE = '#1B2733';
+window.DUR = 10;
+
+window.EV = [
+  { t: 0.0, type: 'hit',   id: 'cut_hit/punch',  gain: 1.00 },
+  { t: 2.0, type: 'whoosh', id: 'fit/whoosh.short/bamboo_swish', gain: 0.85 },
+  { t: 4.0, type: 'hit',   id: 'cut_hit/sub',    gain: 0.95 },
+  { t: 6.0, type: 'tick',  id: 'fit/tick/domino', gain: 0.80 },
+  { t: 8.0, type: 'hit',   id: 'cut_hit/air',    gain: 0.90 },
+  { t: 1.0, type: 'tick',  id: 'hover_tick/air', gain: 0.35 },
+  { t: 7.0, type: 'tick',  id: 'click/soft',     gain: 0.30 },
+];
+
+const LINES = [
+  { id: 'l1', text: 'SOUND', t0: 0.08, t1: 1.98, box: [150, 470, 1180, 610] },
+  { id: 'l2', text: '252',   t0: 2.08, t1: 3.98, box: [150, 470, 1180, 610] },
+  { id: 'l3', text: 'FRAME', t0: 4.08, t1: 5.98, box: [150, 470, 1180, 610] },
+  { id: 'l4', text: 'SYNTH', t0: 6.08, t1: 7.98, box: [150, 470, 1180, 610] },
+  { id: 'l5', text: 'METER', t0: 8.08, t1: 9.95, box: [150, 470, 1180, 610] },
+];
+
+const ease = (u) => u < 0.5 ? 4*u*u*u : 1 - Math.pow(-2*u + 2, 3) / 2;  // one easing family
+const clamp01 = (v) => v < 0 ? 0 : v > 1 ? 1 : v;
+
+function grid(t, beat) {
+  // columns arrive as a group, 12 px per beat step, then hold
+  const off = beat * 12;
+  x.strokeStyle = LINE; x.lineWidth = 2;
+  for (let i = 0; i <= 12; i++) {
+    const px = Math.round(120 + i * 140 + off);
+    x.beginPath(); x.moveTo(px, 120); x.lineTo(px, H - 150); x.stroke();
+  }
+  for (let j = 0; j <= 7; j++) {
+    const py = Math.round(120 + j * 115);
+    x.beginPath(); x.moveTo(120, py); x.lineTo(W - 120, py); x.stroke();
+  }
+}
+
+function scope(t, beat) {
+  // a measured-looking readout, deterministic, replays per beat
+  const bx = 1330, by = 200, bw = 440, bh = 190;
+  x.strokeStyle = DIM; x.lineWidth = 2; x.strokeRect(bx, by, bw, bh);
+  const u = clamp01((t - beat * 2) / 2);
+  x.fillStyle = ACC;
+  for (let i = 0; i < 44; i++) {
+    const ph = i * 0.7 + beat * 1.3;
+    const amp = (0.35 + 0.65 * Math.abs(Math.sin(ph + u * 6.2))) * (1 - Math.abs(i - 22) / 40);
+    const h = Math.max(3, Math.round(amp * (bh - 30)));
+    x.fillRect(bx + 14 + i * 9.6, by + bh - 12 - h, 6, h);
+  }
+  x.fillStyle = DIM; x.font = '400 22px Minecraft, monospace'; x.textAlign = 'left';
+  x.fillText(['PEAK', 'ONSET', 'CENTROID', 'ATTACK', 'TAIL'][beat], bx + 14, by - 18);
+  x.fillStyle = INK; x.font = '700 30px Minecraft, monospace';
+  x.textAlign = 'right';
+  x.fillText(['-6.1 dB', '00.000 s', '2.4 kHz', '3 ms', '560 ms'][beat], bx + bw - 14, by - 18);
+}
+
+function clawd(t) {
+  // the mascot, present in the performance: bobs on each beat, never recoloured
+  const b = Math.floor(t / 2), ph = (t - b * 2) / 2;
+  const dy = Math.round(-18 * Math.sin(Math.PI * clamp01(ph * 2)));
+  x.globalAlpha = 0.95;
+  x.drawImage(IMG, 1560, 720 + dy, 210, 210);
+  x.globalAlpha = 1;
+}
+
+function frame(t) {
+  const beat = Math.min(4, Math.floor(t / 2));
+  const u = clamp01((t - beat * 2) / 2);
+
+  x.fillStyle = '#0B0F14'; x.fillRect(0, 0, W, H);
+  grid(t, beat);
+  scope(t, beat);
+
+  // beat marker: a block that wipes left→right in 0.35 s, then holds
+  const wipe = ease(clamp01(u / 0.18));
+  x.fillStyle = ACC;
+  x.fillRect(120, 120, Math.round((W - 240) * wipe), 10);
+
+  // headline, one idea per screen, arriving as a group
+  const line = LINES[beat];
+  const inT = ease(clamp01((t - line.t0) / 0.28));
+  x.save();
+  x.globalAlpha = inT;
+  x.fillStyle = INK; x.font = '700 132px Minecraft, monospace'; x.textAlign = 'left';
+  x.fillText(line.text, 150, 580 + Math.round((1 - inT) * 26));
+  x.fillStyle = ACC; x.fillRect(150, 620, Math.round(120 * inT), 8);
+  x.restore();
+
+  // running index + timecode
+  x.fillStyle = DIM; x.font = '400 26px Minecraft, monospace'; x.textAlign = 'left';
+  x.fillText(`0${beat + 1} / 05`, 150, 380);
+  x.textAlign = 'right';
+  x.fillText(`${t.toFixed(2)}s`, W - 150, 380);
+
+  // progress rail
+  x.fillStyle = LINE; x.fillRect(120, H - 110, W - 240, 6);
+  x.fillStyle = ACC; x.fillRect(120, H - 110, Math.round((W - 240) * (t / window.DUR)), 6);
+  for (let s = 0; s <= 10; s++) {
+    const px = 120 + (W - 240) * (s / 10);
+    x.fillStyle = s % 2 === 0 ? INK : DIM;
+    x.fillRect(Math.round(px) - 1, H - 128, 2, 18);
+  }
+
+  clawd(t);
+}
+
+const IMG = new Image(); IMG.src = 'assets/clawd-kufi.svg';
+
+window.TEXTS = (t) => LINES.filter(l => t >= l.t0 && t < l.t1)
+  .map(l => ({ id: l.id, text: l.text, x0: l.box[0], y0: l.box[1], x1: l.box[2], y1: l.box[3] }));
+
+window.render = frame;
+
+(async () => {
+  await document.fonts.load('700 132px Minecraft').catch(() => {});
+  await new Promise(r => { if (IMG.complete) r(); else { IMG.onload = r; IMG.onerror = r; } });
+  frame(0);
+  window.READY = true;
+})();
+</script>
+</html>

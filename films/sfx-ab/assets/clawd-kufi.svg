@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 0.05 16.4 15.7" width="656" height="628" role="img" aria-label="Clawd, the studio mascot, wearing a white crocheted kufi">
+  <title>Clawd in a kufi</title>
+  <desc>Blocky orange critter: ten-unit body, wide low arms, four stubby legs, two square eyes, white crocheted kufi with a diamond mesh crown and ribbed brim.</desc>
+
+  <defs>
+    <pattern id="knit" patternUnits="userSpaceOnUse" width="0.78" height="0.78" patternTransform="rotate(45)">
+      <rect x="0.2" y="0.2" width="0.38" height="0.38" rx="0.07" fill="#7C7264" />
+    </pattern>
+    <clipPath id="crown">
+      <path d="M1.05,-0.5 C1.05,-2.75 2.9,-3.5 5,-3.5 C7.1,-3.5 8.95,-2.75 8.95,-0.5 Z" />
+    </clipPath>
+  </defs>
+
+  <ellipse cx="8" cy="15.18" rx="7.1" ry="0.42" fill="#2A1C14" opacity="0.16" />
+
+  <g class="clawd">
+    <g class="legs" fill="#EC5B3E">
+      <rect x="3" y="10.9" width="2" height="4.2" rx="0.16" />
+      <rect x="5.667" y="10.9" width="2" height="4.2" rx="0.16" />
+      <rect x="8.333" y="10.9" width="2" height="4.2" rx="0.16" />
+      <rect x="11" y="10.9" width="2" height="4.2" rx="0.16" />
+    </g>
+
+    <g class="arms" fill="#EC5B3E">
+      <rect class="arm-l" x="0.3" y="7.8" width="2.75" height="2" rx="0.22" />
+      <rect class="arm-r" x="12.95" y="7.8" width="2.75" height="2" rx="0.22" />
+    </g>
+
+    <g class="body">
+      <rect x="3" y="4" width="10" height="7" rx="0.34" fill="#EC5B3E" />
+    </g>
+
+    <g class="eyes" fill="#171310">
+      <rect class="eye eye-l" x="5.1" y="5.9" width="1.9" height="1.9" rx="0.1" />
+      <rect class="eye eye-r" x="9.0" y="5.9" width="1.9" height="1.9" rx="0.1" />
+    </g>
+
+    <g class="kufi" transform="translate(3,4)">
+      <rect x="0.2" y="0.02" width="9.6" height="0.28" rx="0.14" fill="#8E2F1C" opacity="0.33" />
+      <path class="crown" d="M0.6,-0.5 C0.6,-2.95 2.6,-3.95 5,-3.95 C7.4,-3.95 9.4,-2.95 9.4,-0.5 Z" fill="#F1EBE0" />
+      <g class="mesh" clip-path="url(#crown)">
+        <path d="M1.05,-0.5 C1.05,-2.75 2.9,-3.5 5,-3.5 C7.1,-3.5 8.95,-2.75 8.95,-0.5 Z" fill="#EBE3D6" />
+        <rect x="0.6" y="-4" width="8.8" height="3.6" fill="url(#knit)" />
+        <path d="M1.1,-2.55 C2.3,-2.75 7.7,-2.75 8.9,-2.55" stroke="#D5CABA" stroke-width="0.07" fill="none" />
+        <path d="M1.32,-1.6 C2.6,-1.82 7.4,-1.82 8.68,-1.6" stroke="#D5CABA" stroke-width="0.07" fill="none" />
+      </g>
+      <path d="M1.5,-1.45 C1.5,-2.6 2.7,-3.35 4.2,-3.55" stroke="#FFFFFF" stroke-width="0.16" fill="none" opacity="0.45" stroke-linecap="round" />
+      <rect class="brim" x="0.35" y="-0.75" width="9.3" height="0.78" rx="0.36" fill="#F4EFE6" />
+      <rect x="0.35" y="0.03" width="9.3" height="0.16" rx="0.08" fill="#D8CDBC" />
+      <g fill="#E2D9CA">
+        <rect x="0.95" y="-0.68" width="0.09" height="0.62" />
+        <rect x="1.55" y="-0.68" width="0.09" height="0.62" />
+        <rect x="2.15" y="-0.68" width="0.09" height="0.62" />
+        <rect x="2.75" y="-0.68" width="0.09" height="0.62" />
+        <rect x="3.35" y="-0.68" width="0.09" height="0.62" />
+        <rect x="3.95" y="-0.68" width="0.09" height="0.62" />
+        <rect x="4.55" y="-0.68" width="0.09" height="0.62" />
+        <rect x="5.15" y="-0.68" width="0.09" height="0.62" />
+        <rect x="5.75" y="-0.68" width="0.09" height="0.62" />
+        <rect x="6.35" y="-0.68" width="0.09" height="0.62" />
+        <rect x="6.95" y="-0.68" width="0.09" height="0.62" />
+        <rect x="7.55" y="-0.68" width="0.09" height="0.62" />
+        <rect x="8.15" y="-0.68" width="0.09" height="0.62" />
+        <rect x="8.75" y="-0.68" width="0.09" height="0.62" />
+      </g>
+    </g>
+  </g>
+</svg>
