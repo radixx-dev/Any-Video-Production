@@ -42,8 +42,8 @@ Around that engine sit the four stages people actually get wrong: **what to make
 Two of those stages are judgement, not code: **picking the idea** (score multiple · repeatability · fit) and **checking the source** (primary page, quoted verbatim). The pipeline says how; no tool pretends to do it for you.
 
 <div align="center">
-<img src="films/sfx-ab/preview.jpg" alt="Four beats from the 10-second sound test" width="900">
-<br><sub>Four of the five beats from <code>films/sfx-ab</code> — the 10-second picture used for the earshot vs librosa test.</sub>
+<img src="films/sound-test/preview.jpg" alt="Four beats from the 10-second sound test" width="900">
+<br><sub>Four of the five beats from <code>films/sound-test</code> — the 10-second film whose sound was designed with earshot.</sub>
 </div>
 
 ## Quickstart
@@ -116,7 +116,7 @@ Any-Video-Production/
 │
 ├── templates/film/            an empty film: page contract, build.sh, TREATMENT.md
 ├── docs/chain.md              stage → command → artefact, as a table
-├── films/sfx-ab/              the 10 s earshot vs librosa test: report, page, mix builder
+├── films/sound-test/          a working 10 s film: page, mix builder, finished MP4
 └── styles/README.md           choosing a style · external style libraries
 ```
 
@@ -252,27 +252,20 @@ graphic and typographic shots. Render each to its own MP4 and cut them together 
 same look because both draw the canonical `clawd-kufi.svg` design. It needs Node, Chrome and ffmpeg,
 all of which this repo already requires.
 
-## Sound: why earshot, not librosa
+## Sound
 
-[librosa](https://github.com/librosa/librosa) (ISC, ~9k★) is an audio **analysis and DSP** library.
-[earshot](https://github.com/Leonxlnx/earshot) is a curated **252-sound bank plus judgement tools**.
-They are not interchangeable, and this repo tested it rather than assuming: one 10-second picture,
-two mixes, identical cue times, both measured. Full report in [`films/sfx-ab/README.md`](films/sfx-ab/README.md).
+earshot is the sound engine: a **252-sound procedural bank** plus the tools to judge it —
+`describe`, `match`, `rank`, `find`, `compare`, `ab`, `timeline`, `measure`. The rules this repo
+enforces around it:
 
-| | earshot bank | librosa-only synth |
-|---|---|---|
-| Cues available | **252**, material-named | **0** — each sound hand-built from noise and sine |
-| Sub band | **−14.8 dB** | −22.5 dB |
-| Top band | −14.0 dB | **−7.9 dB** (6.1 dB hissier) |
-| Brightness | 3492 Hz | **10916 Hz** |
-| Attack | 38 ms (body) | 11 ms (click) |
-| Judgement tools | `describe` `match` `rank` `find` `compare` `ab` `timeline` `measure` | `onset` `beat` `feature` (analysis primitives) |
+- one sound per visible action, matched to the material — paper, wood, metal, ink and glass differ
+- peaks within ~8 dB of the voice peak, placed one frame after the picture move
+- **no music**: voice and foley only
+- mastered to −14 LUFS / ≤ −1 dBTP, and the measured number is what gets reported
 
-The one thing librosa arguably does better is exactly what earshot already uses it for: **onset
-detection**, i.e. snapping a cue to a frame boundary. So librosa stays — as earshot's own dependency,
-version 1.0.0, not as a replacement. A useful surprise from the test: earshot's `realness` classifier
-scores *both* mixes as code-synthesised (0.05 vs 0.07), because earshot's bank is procedurally forged,
-not recorded. Weight and material are the honest measures, and there the bank wins by 7.7 dB in the sub.
+[`films/sound-test/`](films/sound-test/README.md) is a working example: 300 frames at 30 fps, five
+structural beats, seven bank cues. Measured sub band −14.8 dB, brightness 3492 Hz, attack 38 ms,
+mastered to −15.4 LUFS at −1.4 dBTP. Watch it here: [`sound-test.mp4`](films/sound-test/sound-test.mp4).
 
 ## Requirements
 
@@ -330,7 +323,6 @@ Full detail in [`CREDITS.md`](CREDITS.md).
 - **[instagram-ai-plugin](https://github.com/proyecto26/instagram-ai-plugin)** — Proyecto 26. Research client, 26 hook formulas, caption linter. MIT.
 - **[claude-content-skills](https://github.com/Ootto-AI/claude-content-skills)** — Ootto-AI. Creator research and reel teardown. MIT.
 - **[ClaudeAnimationBase](https://github.com/JohnHeibel/ClaudeAnimationBase)** — John Heibel. Optional character animation: Clawd's 31 emotions, p5.brush renderer. MIT, cloned separately, not bundled.
-- **[librosa](https://github.com/librosa/librosa)** — librosa developers. Audio analysis, used by earshot for onset/feature work; not a sound bank. ISC, installed as a dependency, not bundled.
 
 ## Roadmap
 
