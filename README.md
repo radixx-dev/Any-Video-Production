@@ -46,7 +46,7 @@ Two of those stages are judgement, not code: **picking the idea** (score multipl
 ```bash
 git clone git@github.com:radixx-dev/Any-Video-Production.git
 cd Any-Video-Production
-./setup.sh                      # checks tools, fetches the Lemo library + its render tier
+./install.sh                    # same as ./setup.sh: checks tools, fetches the heavy parts
 ./setup.sh --check              # report only, installs nothing
 ```
 
@@ -230,6 +230,8 @@ From `AGENTS.md`, and they win over any style's own spec:
 | Python | ≥ 3.11 | earshot, subtitles, contact sheets |
 | FFmpeg | ≥ 7 | encoding and mastering |
 | git | any | fetching the engine |
+
+`./setup.sh` and `./install.sh` are the same script — pick whichever name you expect.
 | uv | optional | faster venvs |
 
 What `./setup.sh` downloads on first run, so nobody mistakes it for a bug:
