@@ -41,6 +41,11 @@ Around that engine sit the four stages people actually get wrong: **what to make
 
 Two of those stages are judgement, not code: **picking the idea** (score multiple · repeatability · fit) and **checking the source** (primary page, quoted verbatim). The pipeline says how; no tool pretends to do it for you.
 
+<div align="center">
+<img src="films/sfx-ab/preview.jpg" alt="Four beats from the 10-second sound test" width="900">
+<br><sub>Four of the five beats from <code>films/sfx-ab</code> — the 10-second picture used for the earshot vs librosa test.</sub>
+</div>
+
 ## Quickstart
 
 ```bash
@@ -111,6 +116,7 @@ Any-Video-Production/
 │
 ├── templates/film/            an empty film: page contract, build.sh, TREATMENT.md
 ├── docs/chain.md              stage → command → artefact, as a table
+├── films/sfx-ab/              the 10 s earshot vs librosa test: report, page, mix builder
 └── styles/README.md           choosing a style · external style libraries
 ```
 
@@ -222,6 +228,52 @@ From `AGENTS.md`, and they win over any style's own spec:
 | Source every claim | primary page, quoted verbatim, URL recorded |
 | Report honestly | a check that failed is reported as failed, audio as measured not heard |
 
+## Character animation (optional)
+
+Not every film wants kinetic type. When a story needs **Clawd acting** — a costume, a reaction, a dance,
+a specific emotion — use [JohnHeibel/ClaudeAnimationBase](https://github.com/JohnHeibel/ClaudeAnimationBase)
+(MIT, ~3k★). It is a separate starter kit, not a dependency of this repo, and it does not need Lemo:
+
+- **31 acted emotions** plus views, eyes, mouths, hats, emotes and dances for the Clawd rig
+  (`src/clawd.js`), drawn with p5.js + p5.brush for a hand-painted look
+- a headless renderer (`render.mjs`) with contact sheets, frame strips, crops, stills and MP4, plus
+  `studio.html` to scrub the timeline in Chrome
+- `ANIMATION_GUIDE.md` with the rules it follows: handmade, alive, one piece, no text, transitions
+  always, something happens in every scene
+
+```bash
+git clone https://github.com/JohnHeibel/ClaudeAnimationBase && cd ClaudeAnimationBase
+npm install
+node render.mjs --clip --out=out/video.mp4     # 11 s demo; --soft-gl without a GPU, --chrome=<path> if needed
+```
+
+How the two fit together: ClaudeAnimationBase renders character shots with emotions; Lemo renders
+graphic and typographic shots. Render each to its own MP4 and cut them together — the mascot keeps the
+same look because both draw the canonical `clawd-kufi.svg` design. It needs Node, Chrome and ffmpeg,
+all of which this repo already requires.
+
+## Sound: why earshot, not librosa
+
+[librosa](https://github.com/librosa/librosa) (ISC, ~9k★) is an audio **analysis and DSP** library.
+[earshot](https://github.com/Leonxlnx/earshot) is a curated **252-sound bank plus judgement tools**.
+They are not interchangeable, and this repo tested it rather than assuming: one 10-second picture,
+two mixes, identical cue times, both measured. Full report in [`films/sfx-ab/README.md`](films/sfx-ab/README.md).
+
+| | earshot bank | librosa-only synth |
+|---|---|---|
+| Cues available | **252**, material-named | **0** — each sound hand-built from noise and sine |
+| Sub band | **−14.8 dB** | −22.5 dB |
+| Top band | −14.0 dB | **−7.9 dB** (6.1 dB hissier) |
+| Brightness | 3492 Hz | **10916 Hz** |
+| Attack | 38 ms (body) | 11 ms (click) |
+| Judgement tools | `describe` `match` `rank` `find` `compare` `ab` `timeline` `measure` | `onset` `beat` `feature` (analysis primitives) |
+
+The one thing librosa arguably does better is exactly what earshot already uses it for: **onset
+detection**, i.e. snapping a cue to a frame boundary. So librosa stays — as earshot's own dependency,
+version 1.0.0, not as a replacement. A useful surprise from the test: earshot's `realness` classifier
+scores *both* mixes as code-synthesised (0.05 vs 0.07), because earshot's bank is procedurally forged,
+not recorded. Weight and material are the honest measures, and there the bank wins by 7.7 dB in the sub.
+
 ## Requirements
 
 | Tool | Version | Why |
@@ -277,6 +329,8 @@ Full detail in [`CREDITS.md`](CREDITS.md).
 - **[humanizer](https://github.com/blader/humanizer)** — Siqi Chen. MIT.
 - **[instagram-ai-plugin](https://github.com/proyecto26/instagram-ai-plugin)** — Proyecto 26. Research client, 26 hook formulas, caption linter. MIT.
 - **[claude-content-skills](https://github.com/Ootto-AI/claude-content-skills)** — Ootto-AI. Creator research and reel teardown. MIT.
+- **[ClaudeAnimationBase](https://github.com/JohnHeibel/ClaudeAnimationBase)** — John Heibel. Optional character animation: Clawd's 31 emotions, p5.brush renderer. MIT, cloned separately, not bundled.
+- **[librosa](https://github.com/librosa/librosa)** — librosa developers. Audio analysis, used by earshot for onset/feature work; not a sound bank. ISC, installed as a dependency, not bundled.
 
 ## Roadmap
 
