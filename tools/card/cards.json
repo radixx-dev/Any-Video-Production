@@ -1600,22 +1600,6 @@
     "#F2604A"
    ],
    "real": false
-  },
-  {
-   "slug": "_template",
-   "num": "",
-   "en": "My Style",
-   "cn": "我的风格",
-   "cat": "Graphic & Type",
-   "film": "Title of the Demo Film",
-   "line": "One sentence: what happens in the demo film.",
-   "pal": [
-    "#111111",
-    "#F7F3EA",
-    "#FF4D2E",
-    "#3B5BDB"
-   ],
-   "real": false
   }
  ]
 }

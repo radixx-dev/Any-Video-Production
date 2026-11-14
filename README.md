@@ -3,7 +3,7 @@
 # Any-Video-Production
 
 **A code-rendered film studio you can clone.**
-Research a niche → write and humanise the script → score the hook → direct in one of 100 styles → draw every frame in code → design the sound → post it.
+Research a niche → write and humanise the script → score the hook → direct in one of 99 styles → draw every frame in code → design the sound → post it.
 
 No video model. No editing timeline. No subscription.
 
@@ -11,7 +11,7 @@ No video model. No editing timeline. No subscription.
 [![Node](https://img.shields.io/badge/node-%E2%89%A520-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org)
 [![Python](https://img.shields.io/badge/python-%E2%89%A53.11-3776AB?logo=python&logoColor=white)](https://python.org)
 [![FFmpeg](https://img.shields.io/badge/ffmpeg-%E2%89%A57-007808?logo=ffmpeg&logoColor=white)](https://ffmpeg.org)
-[![Styles](https://img.shields.io/badge/styles-100-d97757)](https://github.com/lemomo-ai/lemo-opuscar)
+[![Styles](https://img.shields.io/badge/styles-99-d97757)](https://github.com/lemomo-ai/lemo-opuscar)
 [![SFX](https://img.shields.io/badge/sfx-252%20sounds-8a2be2)](https://github.com/Leonxlnx/earshot)
 [![Engine stars](https://img.shields.io/github/stars/lemomo-ai/lemo-opuscar?label=lemo--opuscar)](https://github.com/lemomo-ai/lemo-opuscar)
 
@@ -36,7 +36,7 @@ Around that engine sit the four stages people actually get wrong: **what to make
 | 1 | **Research** — what is working in your niche, ranked by outlier multiple over each account's own median | `skills/content-research`, `skills/instagram-research`, `skills/instagram`, `skills/reel-analyzer` | [Ootto-AI/claude-content-skills](https://github.com/Ootto-AI/claude-content-skills) · [proyecto26/instagram-ai-plugin](https://github.com/proyecto26/instagram-ai-plugin) | MIT |
 | 2 | **Scripting** — a story to one person, then the AI tells stripped out | `skills/humanizer` + the engine's `DIRECTOR.md` | [blader/humanizer](https://github.com/blader/humanizer) · [lemomo-ai/lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) | MIT |
 | 3 | **Hook** — three candidates from three formulas, scored on five axes | `skills/instagram-content/scripts/` + `bin/hook.sh` | [proyecto26/instagram-ai-plugin](https://github.com/proyecto26/instagram-ai-plugin) (26 formulas, `hook-score.ts`) | MIT |
-| 4 | **Video** — treatment, style, code, frames | `skills/lemo-opuscar` + `bin/render.sh` | [lemomo-ai/lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) — **100 styles** | MIT AND CC-BY-NC-4.0 |
+| 4 | **Video** — treatment, style, code, frames | `skills/lemo-opuscar` + `bin/render.sh` | [lemomo-ai/lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) — **99 styles** | MIT AND CC-BY-NC-4.0 |
 | 5 | **SFX** — one sound per visible action, measured, mixed | `skills/earshot` + `bin/sfx.sh` | [Leonxlnx/earshot](https://github.com/Leonxlnx/earshot) — **252 sounds** | MIT |
 
 Two of those stages are judgement, not code: **picking the idea** (score multiple · repeatability · fit) and **checking the source** (primary page, quoted verbatim). The pipeline says how; no tool pretends to do it for you.
@@ -186,9 +186,11 @@ Scores **length, specificity, stakes, frontload**, plus spoken time. The report 
 | `lemo-opuscar` | fetches the engine library, then follows its `AGENTS.md` | [lemomo-ai/lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar) |
 | `earshot` | listening, choosing, measuring and verifying sound | [Leonxlnx/earshot](https://github.com/Leonxlnx/earshot) |
 
-## The gallery: all 100 styles
+## The gallery: all 99 styles
 
-One card per style, in the library's own categories. Each card uses that style's palette and grammar, read straight out of its `STYLE.md` — these are **spec cards, not demo frames**: only two styles in the library ship a runnable demo (`halftone-dossier`, `paper-lantern`). Open `styles/<slug>/STYLE.md` in the library for the invariants; regenerate the set with `./tools/card/render.sh`.
+Every style in the library, grouped the way the library groups them. **For the real showcase, open the official gallery — each style has a demo film there, made entirely in code: [lemomo-ai.github.io/lemo-opuscar](https://lemomo-ai.github.io/lemo-opuscar/)** ([repo](https://github.com/lemomo-ai/lemo-opuscar), 15.8k★, MIT for code and CC-BY-NC-4.0 for the styles).
+
+The cards below are an index generated here from each style's own palette and category grammar — **spec cards, not demo frames**: only two styles ship a runnable demo in the library checkout (`halftone-dossier`, `paper-lantern`). Open `styles/<slug>/STYLE.md` for the invariants, watch the official demo for the motion, then `./tools/card/render.sh` regenerates this set.
 
 ### Edit &amp; Documentary · 8
 
@@ -224,11 +226,11 @@ One card per style, in the library's own categories. Each card uses that style's
 <tr><td align="center" width="20%"><img src="styles/previews/printed-long-take.jpg" width="230" alt="Scratchboard Long Take"><br><sub><b>Scratchboard Long Take</b><br><code>printed-long-take</code></sub></td><td align="center" width="20%"><img src="styles/previews/pop-art.jpg" width="230" alt="Pop Art"><br><sub><b>Pop Art</b><br><code>pop-art</code></sub></td><td align="center" width="20%"><img src="styles/previews/vintage-collage.jpg" width="230" alt="Vintage Engraving Collage"><br><sub><b>Vintage Engraving Collage</b><br><code>vintage-collage</code></sub></td></tr>
 </table>
 
-### Graphic &amp; Type · 9
+### Graphic &amp; Type · 8
 
 <table>
 <tr><td align="center" width="20%"><img src="styles/previews/swiss-motion.jpg" width="230" alt="Swiss Motion Graphics"><br><sub><b>Swiss Motion Graphics</b><br><code>swiss-motion</code></sub></td><td align="center" width="20%"><img src="styles/previews/spy-titles.jpg" width="230" alt="60s Spy Title Sequence"><br><sub><b>60s Spy Title Sequence</b><br><code>spy-titles</code></sub></td><td align="center" width="20%"><img src="styles/previews/art-deco.jpg" width="230" alt="Art Deco"><br><sub><b>Art Deco</b><br><code>art-deco</code></sub></td><td align="center" width="20%"><img src="styles/previews/pictogram-motion.jpg" width="230" alt="Pictogram Motion"><br><sub><b>Pictogram Motion</b><br><code>pictogram-motion</code></sub></td><td align="center" width="20%"><img src="styles/previews/bauhaus-shapes.jpg" width="230" alt="Bauhaus Shapes"><br><sub><b>Bauhaus Shapes</b><br><code>bauhaus-shapes</code></sub></td></tr>
-<tr><td align="center" width="20%"><img src="styles/previews/flat-space-explainer.jpg" width="230" alt="Scale Zoom Explainer"><br><sub><b>Scale Zoom Explainer</b><br><code>flat-space-explainer</code></sub></td><td align="center" width="20%"><img src="styles/previews/text-flash-cuts.jpg" width="230" alt="Text Flash Cuts"><br><sub><b>Text Flash Cuts</b><br><code>text-flash-cuts</code></sub></td><td align="center" width="20%"><img src="styles/previews/silhouette-rhythm.jpg" width="230" alt="Silhouette Rhythm"><br><sub><b>Silhouette Rhythm</b><br><code>silhouette-rhythm</code></sub></td><td align="center" width="20%"><img src="styles/previews/_template.jpg" width="230" alt="My Style"><br><sub><b>My Style</b><br><code>_template</code></sub></td></tr>
+<tr><td align="center" width="20%"><img src="styles/previews/flat-space-explainer.jpg" width="230" alt="Scale Zoom Explainer"><br><sub><b>Scale Zoom Explainer</b><br><code>flat-space-explainer</code></sub></td><td align="center" width="20%"><img src="styles/previews/text-flash-cuts.jpg" width="230" alt="Text Flash Cuts"><br><sub><b>Text Flash Cuts</b><br><code>text-flash-cuts</code></sub></td><td align="center" width="20%"><img src="styles/previews/silhouette-rhythm.jpg" width="230" alt="Silhouette Rhythm"><br><sub><b>Silhouette Rhythm</b><br><code>silhouette-rhythm</code></sub></td></tr>
 </table>
 
 ### Line Diagrams · 8
@@ -356,7 +358,7 @@ Not verified here, and worth knowing: a full film with narration and a mixed sou
 
 Full detail in [`CREDITS.md`](CREDITS.md).
 
-- **[Lemo-Opuscar](https://github.com/lemomo-ai/lemo-opuscar)** — Lemomo. The engine, 100 styles, director and technique guides. `MIT AND CC-BY-NC-4.0`: the styles are **non-commercial**, which this free repo respects. Only the MIT fetcher is bundled; the library is downloaded, never committed.
+- **[Lemo-Opuscar](https://github.com/lemomo-ai/lemo-opuscar)** — Lemomo. The engine, 99 styles, director and technique guides. `MIT AND CC-BY-NC-4.0`: the styles are **non-commercial**, which this free repo respects. Only the MIT fetcher is bundled; the library is downloaded, never committed.
 - **[earshot](https://github.com/Leonxlnx/earshot)** — Leon Lin. SFX bank and sound judgement. MIT.
 - **[humanizer](https://github.com/blader/humanizer)** — Siqi Chen. MIT.
 - **[instagram-ai-plugin](https://github.com/proyecto26/instagram-ai-plugin)** — Proyecto 26. Research client, 26 hook formulas, caption linter. MIT.

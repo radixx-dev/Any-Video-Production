@@ -1,5 +1,7 @@
 # Styles
 
+> **Showcase:** the official gallery has a demo film for every style, made entirely in code — [lemomo-ai.github.io/lemo-opuscar](https://lemomo-ai.github.io/lemo-opuscar/) ([repo](https://github.com/lemomo-ai/lemo-opuscar), 15.8k★). This repo's README carries a card per style as a quick index.
+
 The engine's own library is the default: **100 styles**, each a `STYLE.md` (fixed invariants) plus a
 demo film made in code. After `./setup.sh` they are at `$HOME/lemo-opuscar/styles/`, indexed in
 `styles/README.md` there.

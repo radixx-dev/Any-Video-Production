@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Render all 100 style cards: 4 sheets of 25 at 3840×2160, sliced into styles/previews/*.jpg.
+# Render all 99 style cards: 4 sheets of 25 at 3840×2160, sliced into styles/previews/*.jpg.
 #   ./tools/card/render.sh            (needs the Lemo library from ./install.sh)
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
@@ -12,4 +12,4 @@ for s in 0 1 2 3; do
       --q "sheet=$s" --prefix "sheet$s" --out "$ROOT/tools/card/sheets" >/dev/null )
 done
 cd "$ROOT" && python3 tools/card/slice.py
-echo "100 cards in styles/previews"
+echo "99 cards in styles/previews"
